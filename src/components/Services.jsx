@@ -96,7 +96,9 @@ const Services = () => {
   const [selectedService, setSelectedService] = useState(null)
 
   return (
+
     <section id="services" className="services">
+    
       <div className="container">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -126,40 +128,7 @@ const Services = () => {
           ))}
         </div>
       </div>
-      <AnimatePresence>
-        {selectedService && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="service-details-overlay"
-            onClick={() => setSelectedService(null)}
-          >
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              className="service-details"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button className="close-btn" onClick={() => setSelectedService(null)}>
-                <X />
-              </button>
-              <div className="service-content">
-                <div className="service-icon large">{selectedService.icon}</div>
-                <h2>{selectedService.title}</h2>
-                <p>{selectedService.details}</p>
-                <h3>Key Features:</h3>
-                <ul>
-                  {selectedService.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+    
     </section>
   )
 }
