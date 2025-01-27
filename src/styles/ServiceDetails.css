@@ -1,0 +1,57 @@
+.service-details-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.service-details {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.service-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.service-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.service-text {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.service-text p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.close-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-btn:hover {
+  color: #3b82f6;
+}

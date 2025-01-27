@@ -1,0 +1,37 @@
+/* Solutions.css */
+.solutions {
+  background-color: #232323;
+}
+
+.solutions .section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.solution-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solution-list li {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solution-list li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.solution-list li h4 {
+  color: #3b82f6;
+  font-size: 1.5rem;
+}
