@@ -5,6 +5,7 @@ import { motion, useAnimation } from "framer-motion"
 import { FaReact, FaNodeJs, FaPython, FaAws, FaDocker } from "react-icons/fa"
 import { SiKubernetes, SiTypescript, SiMongodb, SiPostgresql, SiRedis, SiGraphql, SiNextdotjs } from "react-icons/si"
 import "../styles/Hero.css"
+import Layout from "../layout/layout"
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
@@ -17,7 +18,8 @@ export default function Hero() {
   }, [counterControls])
 
   return (
-    <div className="landing-page">
+    <Layout>
+       <div className="landing-page">
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-background">
@@ -210,28 +212,28 @@ export default function Hero() {
       {/* Process Section */}
       <ProcessSection />
 
-      {/* Testimonial Section */}
-      <section className="testimonials">
-        <div className="container">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="section-title"
-          >
-            What Our Clients Say
-          </motion.h2>
-          {/* <TestimonialSlider testimonials={testimonials} /> */}
-        </div>
-      </section>
+        <section className="testimonials">
+          <div className="container">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="section-title"
+            >
+              What Our Clients Say
+            </motion.h2>
+            <TestimonialSlider testimonials={testimonials} />
+          </div>
+        </section>
 
-      {/* Team Section */}
-      <TeamSection />
+        {/* Team Section */}
+        <TeamSection />
 
-      {/* Contact Section */}
-      
-    </div>
+        {/* Contact Section */}
+        <ContactSection />
+      </div>
+    </Layout>
   )
 }
 
@@ -585,6 +587,7 @@ const testimonials = [
 
 const TestimonialSlider = ({ testimonials }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const sliderRef = useRef(null)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -594,31 +597,43 @@ const TestimonialSlider = ({ testimonials }) => {
     return () => clearInterval(interval)
   }, [testimonials.length])
 
+  useEffect(() => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollTo({
+        left: currentIndex * sliderRef.current.offsetWidth,
+        behavior: "smooth",
+      })
+    }
+  }, [currentIndex])
+
   return (
-    <div className="testimonial-slider">
-      {testimonials.map((testimonial, index) => (
-        <motion.div
-          key={index}
-          className={`testimonial-item ${index === currentIndex ? "active" : ""}`}
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: index === currentIndex ? 1 : 0, x: index === currentIndex ? 0 : 100 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="testimonial-content">
-            <p>"{testimonial.quote}"</p>
-            <div className="testimonial-author">
-              <div className="author-image">
-                <img src={testimonial.avatar || "/placeholder.svg"} alt={testimonial.name} />
-                <div className="digital-overlay"></div>
-              </div>
-              <div className="author-info">
-                <h4>{testimonial.name}</h4>
-                <span>{testimonial.position}</span>
+    <div className="testimonial-slider-container">
+      <div className="testimonial-slider" ref={sliderRef}>
+        {testimonials.map((testimonial, index) => (
+          <div key={index} className="testimonial-item">
+            <div className="testimonial-content">
+              <div className="quote-icon">❝</div>
+              <p>{testimonial.quote}</p>
+              <div className="testimonial-author">
+                <img src={testimonial.avatar || "/placeholder.svg"} alt={testimonial.name} className="author-image" />
+                <div className="author-info">
+                  <h4>{testimonial.name}</h4>
+                  <span>{testimonial.position}</span>
+                </div>
               </div>
             </div>
           </div>
-        </motion.div>
-      ))}
+        ))}
+      </div>
+      <div className="testimonial-dots">
+        {testimonials.map((_, index) => (
+          <button
+            key={index}
+            className={`dot ${index === currentIndex ? "active" : ""}`}
+            onClick={() => setCurrentIndex(index)}
+          />
+        ))}
+      </div>
     </div>
   )
 }

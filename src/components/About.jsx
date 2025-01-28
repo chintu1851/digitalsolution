@@ -2,7 +2,7 @@ import React from "react"
 import { motion } from "framer-motion"
 import { FiGlobe, FiUsers, FiTrendingUp } from "react-icons/fi"
 import "../styles/About.css"
-
+import Layout from "../layout/layout"
 const About = () => {
   const stats = [
     { icon: <FiGlobe />, value: "20+", label: "Countries Served" },
@@ -19,7 +19,8 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="about">
+    <Layout>
+  <section id="about" className="about">
       <div className="container">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -129,6 +130,8 @@ const About = () => {
         </motion.div>
       </div>
     </section>
+    </Layout>
+  
   )
 }
 

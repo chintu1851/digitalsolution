@@ -1,5 +1,6 @@
-import React, { useState,useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import '../styles/Portfolio.css'
+import Layout from "../layout/layout"
 
 const projects = [
   {
@@ -93,71 +94,74 @@ const Portfolio = () => {
   }
 
   return (
-    <section className="portfolio">
-      <div className="container">
-        <h2 className="section-title">Innovative Portfolio</h2>
-        <p className="section-subtitle">Explore our cutting-edge projects across various domains</p>
-        <div className="tabs">
-          {["all", "mobile", "website", "uiux", "aiml"].map((category) => (
-            <button
-              key={category}
-              className={`tab ${activeTab === category ? "active" : ""}`}
-              onClick={() => setActiveTab(category)}
-            >
-              {category === "aiml" ? "AI/ML" : category.charAt(0).toUpperCase() + category.slice(1)}
-            </button>
-          ))}
-        </div>
-        <div className="portfolio-grid">
-          {filterProjects(activeTab).map((project) => (
-            <div
-              key={project.id}
-              id={`project-${project.id}`}
-              className={`portfolio-item ${animatedItems.includes(`project-${project.id}`) ? "animate" : ""}`}
-              onClick={() => setSelectedProject(project)}
-            >
-              <img src={project.image || "/placeholder.svg"} alt={project.title} />
-              <div className="portfolio-item-content">
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <div className="technologies">
-                  {project.technologies.map((tech, index) => (
-                    <span key={index} className="tech-tag">
-                      {tech}
-                    </span>
-                  ))}
+    <Layout>
+      <section className="portfolio">
+        <div className="container">
+          <h2 className="section-title">Innovative Portfolio</h2>
+          <p className="section-subtitle">Explore our cutting-edge projects across various domains</p>
+          <div className="tabs">
+            {["all", "mobile", "website", "uiux", "aiml"].map((category) => (
+              <button
+                key={category}
+                className={`tab ${activeTab === category ? "active" : ""}`}
+                onClick={() => setActiveTab(category)}
+              >
+                {category === "aiml" ? "AI/ML" : category.charAt(0).toUpperCase() + category.slice(1)}
+              </button>
+            ))}
+          </div>
+          <div className="portfolio-grid">
+            {filterProjects(activeTab).map((project) => (
+              <div
+                key={project.id}
+                id={`project-${project.id}`}
+                className={`portfolio-item ${animatedItems.includes(`project-${project.id}`) ? "animate" : ""}`}
+                onClick={() => setSelectedProject(project)}
+              >
+                <img src={project.image || "/placeholder.svg"} alt={project.title} />
+                <div className="portfolio-item-content">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <div className="technologies">
+                    {project.technologies.map((tech, index) => (
+                      <span key={index} className="tech-tag">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-        <div className="cta-container">
-          <a href="#contact" className="cta-button">
-            Discuss Your Project
-          </a>
-        </div>
-      </div>
-      {selectedProject && (
-        <div className="modal" onClick={() => setSelectedProject(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <span className="close" onClick={() => setSelectedProject(null)}>
-              &times;
-            </span>
-            <img src={selectedProject.image || "/placeholder.svg"} alt={selectedProject.title} />
-            <h2>{selectedProject.title}</h2>
-            <p>{selectedProject.description}</p>
-            <div className="technologies">
-              {selectedProject.technologies.map((tech, index) => (
-                <span key={index} className="tech-tag">
-                  {tech}
-                </span>
-              ))}
-            </div>
-
+            ))}
+          </div>
+          <div className="cta-container">
+            <a href="#contact" className="cta-button">
+              Discuss Your Project
+            </a>
           </div>
         </div>
-      )}
-    </section>
+        {selectedProject && (
+          <div className="modal" onClick={() => setSelectedProject(null)}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <span className="close" onClick={() => setSelectedProject(null)}>
+                &times;
+              </span>
+              <img src={selectedProject.image || "/placeholder.svg"} alt={selectedProject.title} />
+              <h2>{selectedProject.title}</h2>
+              <p>{selectedProject.description}</p>
+              <div className="technologies">
+                {selectedProject.technologies.map((tech, index) => (
+                  <span key={index} className="tech-tag">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+            </div>
+          </div>
+        )}
+      </section>
+    </Layout>
+
   )
 }
 

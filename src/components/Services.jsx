@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { X, Code, Brain, Cloud, Shield, Wifi, LineChart } from "lucide-react"
 import { Link } from "react-router-dom"
 import '../styles/Services.css'
+import Layout from "../layout/layout"
 const services = [
   {
     title: "Custom Software Development",
@@ -119,7 +120,8 @@ const Services = () => {
   }
 
   return (
-    <section id="services" className="services">
+    <Layout>
+       <section id="services" className="services">
       <div className="container">
         <motion.h2
           initial={{ opacity: 0, y: -50 }}
@@ -207,6 +209,8 @@ const Services = () => {
         )}
       </AnimatePresence>
     </section>
+    </Layout>
+   
   )
 }
 
