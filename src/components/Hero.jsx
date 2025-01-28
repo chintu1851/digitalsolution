@@ -57,7 +57,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="hero-cta"
             >
-              <a href="#services" className="cta-button primary">
+              <a href="/services" className="cta-button primary">
                 Our Services
               </a>
               <a href="#portfolio" className="cta-button secondary">
@@ -126,7 +126,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
+                transition={{ duration: 0.2, delay: index * 0.1 }}
                 className="service-item"
               >
                 <service.icon />
@@ -515,18 +515,18 @@ const services = [
 ]
 
 const techStack = [
-  { name: "React", icon: <FaReact size={50} /> },
-  { name: "Node.js", icon: <FaNodeJs size={50} /> },
-  { name: "Python", icon: <FaPython size={50} /> },
-  { name: "AWS", icon: <FaAws size={50} /> },
-  { name: "Docker", icon: <FaDocker size={50} /> },
-  { name: "Kubernetes", icon: <SiKubernetes size={50} /> },
-  { name: "TypeScript", icon: <SiTypescript size={50} /> },
-  { name: "MongoDB", icon: <SiMongodb size={50} /> },
-  { name: "PostgreSQL", icon: <SiPostgresql size={50} /> },
-  { name: "Redis", icon: <SiRedis size={50} /> },
-  { name: "GraphQL", icon: <SiGraphql size={50} /> },
-  { name: "Next.js", icon: <SiNextdotjs size={50} /> },
+  { name: "React", icon: <FaReact size={50} color="#4a90e2"/> },
+  { name: "Node.js", icon: <FaNodeJs size={50} color="#4a90e2"/> },
+  { name: "Python", icon: <FaPython size={50} color="#4a90e2"/> },
+  { name: "AWS", icon: <FaAws size={50} color="#4a90e2"/> },
+  { name: "Docker", icon: <FaDocker size={50} color="#4a90e2"/> },
+  { name: "Kubernetes", icon: <SiKubernetes size={50} color="#4a90e2"/> },
+  { name: "TypeScript", icon: <SiTypescript size={50} color="#4a90e2"/> },
+  { name: "MongoDB", icon: <SiMongodb size={50} color="#4a90e2"/> },
+  { name: "PostgreSQL", icon: <SiPostgresql size={50} color="#4a90e2"/> },
+  { name: "Redis", icon: <SiRedis size={50} color="#4a90e2"/> },
+  { name: "GraphQL", icon: <SiGraphql size={50} color="#4a90e2"/> },
+  { name: "Next.js", icon: <SiNextdotjs size={50} color="#4a90e2"/> },
 ]
 
 const projects = [

@@ -11,7 +11,7 @@ const About = () => {
   ]
 
   const timeline = [
-    { year: 2010, event: "TechNova founded" },
+    { year: 2010, event: "Intuiqo founded" },
     { year: 2013, event: "Expanded to international markets" },
     { year: 2016, event: "Launched AI & ML division" },
     { year: 2019, event: "Achieved ISO 27001 certification" },
@@ -28,7 +28,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="section-title"
         >
-          About TechNova
+          About Intuiqo
         </motion.h2>
 
         <div className="about-content">
@@ -40,7 +40,7 @@ const About = () => {
             className="about-text"
           >
             <p>
-              At TechNova, we're passionate about leveraging technology to solve complex business challenges. Founded in
+              At Intuiqo, we're passionate about leveraging technology to solve complex business challenges. Founded in
               2010, we've grown from a small startup to a global technology solutions provider, serving clients across
               various industries and continents.
             </p>
@@ -60,7 +60,7 @@ const About = () => {
           >
             <img
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              alt="TechNova team"
+              alt="Intuiqo team"
             />
           </motion.div>
         </div>
@@ -122,7 +122,6 @@ const About = () => {
           <div className="timeline">
             {timeline.map((item, index) => (
               <div key={index} className="timeline-item">
-                <div className="timeline-year">{item.year}</div>
                 <div className="timeline-content">{item.event}</div>
               </div>
             ))}

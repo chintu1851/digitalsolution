@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>About TechNova</h3>
+            <h3>About Intuiqo</h3>
             <p>Empowering businesses with cutting-edge technology solutions for a digital future.</p>
           </div>
           <div className="footer-section">
@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
           <div className="footer-section">
             <h3>Contact Us</h3>
-            <p>Email: info@technova.com</p>
+            <p>Email: info@Intuiqo.com</p>
             <p>Phone: +1 (555) 123-4567</p>
             <p>Address: 123 Tech Avenue, Silicon Valley, CA 94000</p>
           </div>
@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2023 TechNova. All rights reserved.</p>
+          <p>&copy; 2023 Intuiqo. All rights reserved.</p>
         </div>
       </div>
     </footer>
