@@ -213,6 +213,7 @@
 
 @media (max-width: 768px) {
   .about .section-title {
+     margin-top: 5rem;
     font-size: 2rem;
   }
 
@@ -267,7 +268,8 @@
 
 @media (max-width: 480px) {
   .about .section-title {
-    font-size: 1.8rem;
+     margin-top: 5rem;
+    font-size: 2rem;
   }
 
   .about-text p {

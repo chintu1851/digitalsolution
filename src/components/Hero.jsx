@@ -222,7 +222,7 @@ export default function Hero() {
           >
             What Our Clients Say
           </motion.h2>
-          <TestimonialSlider testimonials={testimonials} />
+          {/* <TestimonialSlider testimonials={testimonials} /> */}
         </div>
       </section>
 
