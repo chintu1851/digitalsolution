@@ -7,7 +7,7 @@ import Services from "./components/Services"
 import Solutions from "./components/Solutions"
 import Portfolio from "./components/Portfolio"
 import Contact from "./components/Contact"
-import ServiceDetails from "./components/ServiceDetails"  // Import ServiceDetails component
+ // Import ServiceDetails component
 import './App.css'
 import Footer from "./components/Footer"
 
@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/services/:serviceId" element={<ServiceDetails />} /> {/* Updated route */}
+
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
