@@ -24,7 +24,7 @@ export default function Hero() {
       <section className="hero">
         <div className="hero-background">
           <img
-            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://img.freepik.com/free-photo/dark-illustration-background_181624-11581.jpg?t=st=1738109030~exp=1738112630~hmac=03eed23d86cadfe4c1af1166de116ddde4db0e619153e812ea4cf3556034972e&w=1800"
             alt="Hero Background"
             className="hero-img"
           />

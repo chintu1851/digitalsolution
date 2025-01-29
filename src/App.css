@@ -17,7 +17,10 @@ body {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: #ffffff;
 }
 
@@ -41,16 +44,40 @@ a {
 .cta-button:hover {
   background-color: #4a90e2;
 }
+
 /* Mobile and Tablet Responsive */
 @media (max-width: 768px) {
-  .service-cards, .portfolio-grid, .solution-list {
+
+  .service-cards,
+  .portfolio-grid,
+  .solution-list {
     flex-direction: column;
     align-items: center;
   }
 
-  .service-card, .portfolio-item, .solution-list li {
+  .service-card,
+  .portfolio-item,
+  .solution-list li {
     width: 80%;
     margin: 0 auto;
   }
-}
 
+  .cta-button{
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .cta-button {
+    /* background: linear-gradient(90deg, #4a90e2, #63b3ed); */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+  }
+}
