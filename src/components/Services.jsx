@@ -2,10 +2,13 @@
 
 import React, { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { X, Code, Brain, Cloud, Shield, Wifi, LineChart } from "lucide-react"
 import { Link } from "react-router-dom"
 import '../styles/Services.css'
 import Layout from "../layout/layout"
+import { X, Code, Brain, Cloud, Shield, Wifi, LineChart, BarChart, Briefcase, Search } from "lucide-react";
+
+
+
 const services = [
   {
     title: "Custom Software Development",
@@ -37,45 +40,45 @@ const services = [
     ],
   },
   {
-    title: "Cloud Solutions",
-    description: "Scalable and secure cloud infrastructure design, migration, and management services.",
-    icon: <Cloud className="service-icon" />,
+    title: "Data Analytics",
+    description: "Unlock actionable insights from your data to improve decision-making and business outcomes.",
+    icon: <BarChart className="service-icon" />,
     details:
-      "Our cloud solutions enable businesses to leverage the flexibility, scalability, and cost-effectiveness of cloud computing. We provide end-to-end cloud services, from strategy and migration to ongoing management and optimization.",
+      "Our Data Analytics services provide the tools and expertise to extract meaningful insights from complex data sets. We help businesses make data-driven decisions to improve performance, predict trends, and gain a competitive edge in the market.",
     features: [
-      "Cloud architecture design and implementation",
-      "Multi-cloud and hybrid cloud solutions",
-      "Cloud migration and modernization",
-      "Serverless computing",
-      "Cloud security and compliance",
+      "Data visualization and reporting",
+      "Predictive analytics",
+      "Business intelligence and dashboard creation",
+      "Data mining and trend analysis",
+      "Customer segmentation and profiling",
     ],
   },
+ {
+  title: "Business Consulting",
+  description: "Strategic business consulting to optimize processes, improve efficiency, and drive growth.",
+  icon: <Briefcase className="service-icon" />,  // Using Briefcase icon instead of BusinessCenter
+  details:
+    "Our Business Consulting services help organizations streamline operations and optimize strategies. We work with you to identify opportunities, solve complex challenges, and create actionable plans that align with your business goals and vision.",
+  features: [
+    "Strategic planning and organizational development",
+    "Process improvement and efficiency optimization",
+    "Change management",
+    "Market research and competitor analysis",
+    "Mergers and acquisitions consulting",
+  ],
+},
   {
-    title: "Cybersecurity",
-    description: "Comprehensive security solutions to protect your digital assets and ensure business continuity.",
-    icon: <Shield className="service-icon" />,
+    title: "SEO Services",
+    description: "Enhance your online visibility and drive organic traffic with expert SEO strategies.",
+    icon: <Search className="service-icon" />,
     details:
-      "Our cybersecurity services are designed to protect your organization from evolving cyber threats. We employ a multi-layered approach to security, combining advanced technologies with best practices to safeguard your data, systems, and reputation.",
+      "Our SEO services are designed to help businesses rank higher in search engine results, increasing visibility and driving targeted traffic. We use proven strategies, including keyword optimization, content creation, and technical SEO to improve your online presence.",
     features: [
-      "Vulnerability assessment and penetration testing",
-      "Security information and event management (SIEM)",
-      "Identity and access management",
-      "Incident response and forensics",
-      "Security awareness training",
-    ],
-  },
-  {
-    title: "IoT & Edge Computing",
-    description: "Connect and optimize your devices and data with cutting-edge IoT and edge computing solutions.",
-    icon: <Wifi className="service-icon" />,
-    details:
-      "Our IoT and Edge Computing services help businesses harness the power of connected devices and real-time data processing. We design and implement solutions that enable smart decision-making at the edge, reducing latency and improving efficiency.",
-    features: [
-      "IoT device management and connectivity",
-      "Edge computing architecture and implementation",
-      "Real-time data analytics",
-      "Industrial IoT (IIoT) solutions",
-      "Smart city and home automation",
+      "On-page SEO optimization",
+      "Off-page SEO and link building",
+      "Technical SEO auditing",
+      "Local SEO for targeted marketing",
+      "SEO content strategy and creation",
     ],
   },
   {

@@ -6,7 +6,7 @@ import { FaReact, FaNodeJs, FaPython, FaAws, FaDocker } from "react-icons/fa"
 import { SiKubernetes, SiTypescript, SiMongodb, SiPostgresql, SiRedis, SiGraphql, SiNextdotjs } from "react-icons/si"
 import "../styles/Hero.css"
 import Layout from "../layout/layout"
-
+import bgimage from '../images/bgimage.jpg'
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
   const counterRef = useRef(null)
@@ -24,7 +24,7 @@ export default function Hero() {
       <section className="hero">
         <div className="hero-background">
           <img
-            src="https://img.freepik.com/free-photo/dark-illustration-background_181624-11581.jpg?t=st=1738109030~exp=1738112630~hmac=03eed23d86cadfe4c1af1166de116ddde4db0e619153e812ea4cf3556034972e&w=1800"
+            src={bgimage}
             alt="Hero Background"
             className="hero-img"
           />
