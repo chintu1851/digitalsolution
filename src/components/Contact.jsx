@@ -2,7 +2,11 @@ import React from "react"
 import "../styles/Contact.css"
 import { motion, AnimatePresence } from "framer-motion"
 import Layout from "../layout/layout"
+import { useEffect } from "react"
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <Layout>
       <section id="contact" className="contact">
@@ -15,9 +19,18 @@ const Contact = () => {
           >
             Contact-Us
           </motion.h2>
-          <p className="contact-description">
-            Ready to transform your business with cutting-edge technology? Let's connect and explore the possibilities!
-          </p>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="about-text"
+          >
+            <p className="contact-description">
+              Ready to transform your business with cutting-edge technology? Let's connect and explore the possibilities!
+            </p>
+          </motion.div>
+
           <form className="contact-form">
             <input type="text" placeholder="Your Name" required />
             <input type="email" placeholder="Your Email" required />

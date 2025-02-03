@@ -6,12 +6,14 @@ import { FaReact, FaNodeJs, FaPython, FaAws, FaDocker } from "react-icons/fa"
 import { SiKubernetes, SiTypescript, SiMongodb, SiPostgresql, SiRedis, SiGraphql, SiNextdotjs } from "react-icons/si"
 import "../styles/Hero.css"
 import Layout from "../layout/layout"
-import bgimage from '../images/bgimage.jpg'
+import bgimage from '../images/bgimg2.jpg'
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
   const counterRef = useRef(null)
   const counterControls = useAnimation()
-
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   useEffect(() => {
     setIsVisible(true)
     counterControls.start("visible")
@@ -19,198 +21,196 @@ export default function Hero() {
 
   return (
     <Layout>
-       <div className="landing-page">
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="hero-background">
-          <img
-            src={bgimage}
-            alt="Hero Background"
-            className="hero-img"
-          />
-          <div className="hero-overlay" />
-        </div>
-
-        <div className="container hero-content">
-          <div className="hero-text">
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8 }}
-              className="hero-title"
-            >
-              Transforming Ideas into Digital Reality
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="hero-description"
-            >
-              We craft innovative software solutions that empower businesses to thrive in the digital age. Our expert
-              team combines cutting-edge technology with creative problem-solving to deliver results that exceed
-              expectations.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="hero-cta"
-            >
-              <a href="/services" className="cta-button primary">
-                Our Services
-              </a>
-              <a href="#portfolio" className="cta-button secondary">
-                View Projects
-              </a>
-            </motion.div>
-          </div>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 0 }}
-          animate={{ opacity: 1, y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-          className="scroll-indicator"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M6 9L12 15L18 9"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+      <div className="landing-page">
+        {/* Hero Section */}
+        <section className="hero">
+          <div className="hero-background">
+            <img
+              src={bgimage}
+              alt="Hero Background"
+              className="hero-img"
             />
-          </svg>
-        </motion.div>
-      </section>
-
-      {/* Dynamic Impact Section */}
-      <section className="impact-section">
-        <div className="container">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="section-title"
-          >
-            Our Impact
-          </motion.h2>
-          <div className="impact-grid">
-            <ImpactCard title="Projects Completed" value={150} icon="🚀" />
-            <ImpactCard title="Happy Clients" value={50} icon="😊" />
-            <ImpactCard title="Years of Experience" value={10} icon="🏆" />
-            <ImpactCard title="Team Members" value={25} icon="👥" />
+            <div className="hero-overlay" />
           </div>
-        </div>
-      </section>
 
-      {/* Services Section */}
-      <section id="services" className="services">
-        <div className="container">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="section-title"
-          >
-            Our Expertise
-          </motion.h2>
-
-          <div className="services-grid">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.title}
+          <div className="container hero-content">
+            <div className="hero-text">
+              <motion.h1
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.2, delay: index * 0.1 }}
-                className="service-item"
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+                transition={{ duration: 0.8 }}
+                className="hero-title"
               >
-                <service.icon />
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+                Intuition Engineered. Innovation Delivered
+              </motion.h1>
 
-      {/* Tech Stack Section */}
-      <section className="tech-stack">
-        <div className="container">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="section-title"
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="hero-description"
+              >
+                From brainstorm to breakthroughs, we power progress with innovation that thinks ahead. At Intuiqo, we fuse intuition with technology to craft solutions that don’t just work—they evolve.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="hero-cta"
+              >
+                <a href="/services" className="cta-button primary">
+                  Our Services
+                </a>
+                <a href="#portfolio" className="cta-button secondary">
+                  View Projects
+                </a>
+              </motion.div>
+            </div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 0 }}
+            animate={{ opacity: 1, y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+            className="scroll-indicator"
           >
-            Our Tech Stack
-          </motion.h2>
-          <p className="tech-stack-description">
-            We leverage cutting-edge technologies to build robust and scalable solutions
-          </p>
-          <div className="infinite-loop-slider">
-            <div className="slide-track">
-              {[...techStack, ...techStack].map((tech, index) => (
-                <div key={index} className="slide">
-                  {tech.icon}
-                  <span>{tech.name}</span>
-                </div>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M6 9L12 15L18 9"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </motion.div>
+        </section>
+
+        {/* Dynamic Impact Section */}
+        <section className="impact-section">
+          <div className="container">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="section-title"
+            >
+              Our Impact
+            </motion.h2>
+            <div className="impact-grid">
+              <ImpactCard title="Projects Completed" value={100} icon="🚀" />
+              <ImpactCard title="Happy Clients" value={30} icon="😊" />
+              <ImpactCard title="Years of Experience" value={5} icon="🏆" />
+              <ImpactCard title="Team Members" value={15} icon="👥" />
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section id="services" className="services">
+          <div className="container">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="section-title"
+            >
+              Our Expertise
+            </motion.h2>
+
+            <div className="services-grid">
+              {services.map((service, index) => (
+                <motion.div
+                  key={service.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.2, delay: index * 0.1 }}
+                  className="service-item"
+                >
+                  <service.icon />
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                </motion.div>
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Featured Projects Section */}
-      <section id="portfolio" className="featured-projects">
-        <div className="container">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="section-title"
-          >
-            Featured Projects
-          </motion.h2>
-          <p className="projects-description">Discover how we've helped businesses achieve their digital goals</p>
-
-          <div className="project-blocks">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="project-block"
-              >
-                <img src={project.image || "/placeholder.svg"} alt={project.title} />
-                <div className="project-info">
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                </div>
-              </motion.div>
-            ))}
+        {/* Tech Stack Section */}
+        <section className="tech-stack">
+          <div className="container">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="section-title"
+            >
+              Our Tech Stack
+            </motion.h2>
+            <p className="tech-stack-description">
+              We leverage cutting-edge technologies to build robust and scalable solutions
+            </p>
+            <div className="infinite-loop-slider">
+              <div className="slide-track">
+                {[...techStack, ...techStack].map((tech, index) => (
+                  <div key={index} className="slide">
+                    {tech.icon}
+                    <span>{tech.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
+        </section>
 
-          <div className="portfolio-cta">
-            <a href="/portfolio" className="cta-button primary">
-              View Full Portfolio
-            </a>
+        {/* Featured Projects Section */}
+        <section id="portfolio" className="featured-projects">
+          <div className="container">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="section-title"
+            >
+              Featured Projects
+            </motion.h2>
+            <p className="projects-description">Discover how we've helped businesses achieve their digital goals</p>
+
+            <div className="project-blocks">
+              {projects.map((project, index) => (
+                <motion.div
+                  key={project.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  className="project-block"
+                >
+                  <img src={project.image || "/placeholder.svg"} alt={project.title} />
+                  <div className="project-info">
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="portfolio-cta">
+              <a href="/portfolio" className="cta-button primary">
+                View Full Portfolio
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Process Section */}
-      <ProcessSection />
+        {/* Process Section */}
+        <ProcessSection />
 
         <section className="testimonials">
           <div className="container">
@@ -406,7 +406,7 @@ const ContactSection = () => {
 
 const services = [
   {
-    title: "Web Development",
+    title: "Custom Software Development",
     description: "We build scalable web applications using cutting-edge technologies and best practices.",
     icon: () => (
       <svg className="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -435,7 +435,7 @@ const services = [
     ),
   },
   {
-    title: "Mobile Development",
+    title: "AI & Machine Learning",
     description: "Native and cross-platform mobile applications that deliver exceptional user experiences.",
     icon: () => (
       <svg className="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -445,7 +445,7 @@ const services = [
     ),
   },
   {
-    title: "Cloud Solutions",
+    title: "Data Analytics",
     description: "Scalable cloud infrastructure and DevOps practices for optimal performance.",
     icon: () => (
       <svg className="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -465,7 +465,7 @@ const services = [
     ),
   },
   {
-    title: "UI/UX Design",
+    title: "Business Consulting",
     description: "User-centered design solutions that create engaging and intuitive experiences.",
     icon: () => (
       <svg className="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -482,7 +482,7 @@ const services = [
     ),
   },
   {
-    title: "AI & Machine Learning",
+    title: "SEO Services",
     description: "Intelligent solutions that leverage the power of artificial intelligence.",
     icon: () => (
       <svg className="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -496,7 +496,7 @@ const services = [
     ),
   },
   {
-    title: "Cybersecurity",
+    title: "IT Consulting",
     description: "Comprehensive security solutions to protect your digital assets.",
     icon: () => (
       <svg className="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -517,18 +517,18 @@ const services = [
 ]
 
 const techStack = [
-  { name: "React", icon: <FaReact size={50} color="#4a90e2"/> },
-  { name: "Node.js", icon: <FaNodeJs size={50} color="#4a90e2"/> },
-  { name: "Python", icon: <FaPython size={50} color="#4a90e2"/> },
-  { name: "AWS", icon: <FaAws size={50} color="#4a90e2"/> },
-  { name: "Docker", icon: <FaDocker size={50} color="#4a90e2"/> },
-  { name: "Kubernetes", icon: <SiKubernetes size={50} color="#4a90e2"/> },
-  { name: "TypeScript", icon: <SiTypescript size={50} color="#4a90e2"/> },
-  { name: "MongoDB", icon: <SiMongodb size={50} color="#4a90e2"/> },
-  { name: "PostgreSQL", icon: <SiPostgresql size={50} color="#4a90e2"/> },
-  { name: "Redis", icon: <SiRedis size={50} color="#4a90e2"/> },
-  { name: "GraphQL", icon: <SiGraphql size={50} color="#4a90e2"/> },
-  { name: "Next.js", icon: <SiNextdotjs size={50} color="#4a90e2"/> },
+  { name: "React", icon: <FaReact size={50} color="#4a90e2" /> },
+  { name: "Node.js", icon: <FaNodeJs size={50} color="#4a90e2" /> },
+  { name: "Python", icon: <FaPython size={50} color="#4a90e2" /> },
+  { name: "AWS", icon: <FaAws size={50} color="#4a90e2" /> },
+  { name: "Docker", icon: <FaDocker size={50} color="#4a90e2" /> },
+  { name: "Kubernetes", icon: <SiKubernetes size={50} color="#4a90e2" /> },
+  { name: "TypeScript", icon: <SiTypescript size={50} color="#4a90e2" /> },
+  { name: "MongoDB", icon: <SiMongodb size={50} color="#4a90e2" /> },
+  { name: "PostgreSQL", icon: <SiPostgresql size={50} color="#4a90e2" /> },
+  { name: "Redis", icon: <SiRedis size={50} color="#4a90e2" /> },
+  { name: "GraphQL", icon: <SiGraphql size={50} color="#4a90e2" /> },
+  { name: "Next.js", icon: <SiNextdotjs size={50} color="#4a90e2" /> },
 ]
 
 const projects = [
@@ -558,29 +558,29 @@ const testimonials = [
   {
     quote:
       "Working with this team has been a game-changer for our business. Their innovative solutions have significantly improved our operational efficiency and customer satisfaction.",
-    name: "Sarah Johnson",
-    position: "CEO, TechInnovate Inc.",
+    name: "Robert McGrathy",
+    position: "CEO.",
     avatar: "https://randomuser.me/api/portraits/women/1.jpg",
   },
   {
     quote:
       "The mobile app they developed for us has received overwhelmingly positive feedback from our users. Their attention to detail in UI/UX and commitment to quality is truly commendable.",
-    name: "Michael Chen",
-    position: "Product Manager, HealthTech Solutions",
+    name: "Harsh Satani",
+    position: "CTO",
     avatar: "https://randomuser.me/api/portraits/men/2.jpg",
   },
   {
     quote:
       "Their cybersecurity solutions have given us peace of mind. We feel confident that our digital assets are well-protected, allowing us to focus on growing our business.",
-    name: "Emily Rodriguez",
-    position: "CTO, SecureNet Systems",
+    name: "Shailesh Patel",
+    position: "CEO",
     avatar: "https://randomuser.me/api/portraits/women/3.jpg",
   },
   {
     quote:
       "The AI-powered analytics dashboard they built has transformed how we make decisions. It's intuitive, powerful, and has become an indispensable tool for our entire organization.",
-    name: "David Thompson",
-    position: "Data Science Lead, InsightAI Corp",
+    name: "Meet Boghani",
+    position: "Operations Manager",
     avatar: "https://randomuser.me/api/portraits/men/4.jpg",
   },
 ]
@@ -615,7 +615,6 @@ const TestimonialSlider = ({ testimonials }) => {
               <div className="quote-icon">❝</div>
               <p>{testimonial.quote}</p>
               <div className="testimonial-author">
-                <img src={testimonial.avatar || "/placeholder.svg"} alt={testimonial.name} className="author-image" />
                 <div className="author-info">
                   <h4>{testimonial.name}</h4>
                   <span>{testimonial.position}</span>

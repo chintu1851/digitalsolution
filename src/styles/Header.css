@@ -10,7 +10,7 @@
 }
 
 .header.sticky {
-  /* background-color: rgba(0, 0, 0, 0.95); */
+  background-color: rgba(0, 0, 0, 0.95);
 }
 
 .container {
@@ -26,8 +26,8 @@
 }
 
 .logo {
-  height: 50px; /* Adjust logo height */
-  width: auto;  /* Keep width proportional */
+  height: 50px;
+  width: auto;
 }
 
 .nav-toggle {
@@ -58,8 +58,37 @@
   color: #4a90e2;
 }
 
-.mobile-logo {
+/* Services dropdown styles */
+.services-dropdown {
+  position: relative;
+}
+
+.services-dropdown-content {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.services-dropdown:hover .services-dropdown-content {
+  display: block;
+}
+
+.services-dropdown-content a {
+  color: #ffffff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.services-dropdown-content a:hover {
+  background-color: rgba(74, 144, 226, 0.1);
 }
 
 @media (max-width: 968px) {
@@ -81,7 +110,6 @@
     border-radius: 3px;
     opacity: 1;
     left: 0;
-    transform: rotate(0deg);
     transition: .25s ease-in-out;
   }
 
@@ -122,9 +150,11 @@
     background-color: rgba(0, 0, 0, 0.95);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     transition: right 0.3s ease;
+    padding-top: 60px;
+    overflow-y: auto;
   }
 
   .nav-menu.open {
@@ -135,14 +165,62 @@
     flex-direction: column;
     gap: 20px;
     text-align: center;
+    width: 100%;
   }
 
   .nav-link {
     font-size: 1.3rem;
+    padding: 10px 0;
+    display: block;
   }
 
+  /* Mobile logo styles */
   .mobile-logo {
     display: block;
-    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .mobile-logo img {
+    height: 40px;
+    width: auto;
+  }
+
+  /* Mobile services dropdown styles */
+  .services-dropdown {
+    width: 100%;
+  }
+
+  .services-dropdown-content {
+    position: static;
+    display: none;
+    background-color: transparent;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .services-dropdown.open .services-dropdown-content {
+    display: block;
+  }
+
+  .services-dropdown-content a {
+    padding: 10px 0;
+    font-size: 1.1rem;
+  }
+
+  /* Ensure the Services main link is clickable on mobile */
+  .services-dropdown > .nav-link {
+    display: block;
+    width: 100%;
+  }
+
+  /* Style for the Services dropdown toggle */
+  .services-dropdown > .nav-link::after {
+    content: "\25BC";
+    margin-left: 5px;
+    font-size: 0.8em;
+  }
+
+  .services-dropdown.open > .nav-link::after {
+    content: "\25B2";
   }
 }
