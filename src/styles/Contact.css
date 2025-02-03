@@ -1,6 +1,7 @@
 .contact {
   background-color: #0a0a0a;
   padding: 80px 0;
+  margin-top: 5rem;
 }
 
 .contact .container {
@@ -45,7 +46,7 @@
   padding: 15px;
   border-radius: 5px;
   border: none;
-  background-color: #333;
+  background-color: #28282B;
   color: #fff;
   font-size: 1rem;
 }

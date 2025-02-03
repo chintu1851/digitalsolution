@@ -1,13 +1,9 @@
-"use client"
-
 import React, { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Link } from "react-router-dom"
 import '../styles/Services.css'
 import Layout from "../layout/layout"
 import { X, Code, Brain, Cloud, Shield, Wifi, LineChart, BarChart, Briefcase, Search } from "lucide-react";
-
-
 
 const services = [
   {
@@ -124,94 +120,94 @@ const Services = () => {
 
   return (
     <Layout>
-       <section id="services" className="services">
-      <div className="container">
-        <motion.h2
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="section-title"
-        >
-          Our Services
-        </motion.h2>
-        <motion.div className="services-grid" variants={containerVariants} initial="hidden" animate="visible">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              className="service-card"
-              variants={cardVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setSelectedService(service)}
-            >
-              <div className="service-icon">{service.icon}</div>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-              <motion.button className="learn-more-btn" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                Learn More
-              </motion.button>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-
-      <AnimatePresence>
-        {selectedService && (
-          <motion.div
-            className="service-details-overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+      <section id="services" className="services">
+        <div className="container">
+          <motion.h2
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="section-title"
           >
-            <motion.div
-              className="service-details"
-              initial={{
-                scale: 0.7,
-                opacity: 0,
-                y: 50,
-              }}
-              animate={{
-                scale: 1,
-                opacity: 1,
-                y: 0,
-              }}
-              exit={{
-                scale: 0.7,
-                opacity: 0,
-                y: 50,
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 300,
-                damping: 20,
-              }}
-            >
-              <button className="close-btn" onClick={() => setSelectedService(null)}>
-                <X size={24} />
-              </button>
-              <h2>{selectedService.title}</h2>
-              <div className="service-content">
-                <div className="service-icon large">{selectedService.icon}</div>
-                <p>{selectedService.details}</p>
-                <h3>Key Features:</h3>
-                <ul>
-                  {selectedService.features.map((feature, index) => (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                    >
-                      {feature}
-                    </motion.li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
+            Our Services
+          </motion.h2>
+          <motion.div className="services-grid" variants={containerVariants} initial="hidden" animate="visible">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                className="service-card"
+                variants={cardVariants}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setSelectedService(service)}
+              >
+                <div className="service-icon">{service.icon}</div>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+                <motion.button className="learn-more-btn" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                  Learn More
+                </motion.button>
+              </motion.div>
+            ))}
           </motion.div>
-        )}
-      </AnimatePresence>
-    </section>
+        </div>
+
+        <AnimatePresence>
+          {selectedService && (
+            <motion.div
+              className="service-details-overlay"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <motion.div
+                className="service-details"
+                initial={{
+                  scale: 0.7,
+                  opacity: 0,
+                  y: 50,
+                }}
+                animate={{
+                  scale: 1,
+                  opacity: 1,
+                  y: 0,
+                }}
+                exit={{
+                  scale: 0.7,
+                  opacity: 0,
+                  y: 50,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                }}
+              >
+                <button className="close-btn" onClick={() => setSelectedService(null)}>
+                  <X size={24} />
+                </button>
+                <h2>{selectedService.title}</h2>
+                <div className="service-content">
+                  <div className="service-icon large">{selectedService.icon}</div>
+                  <p>{selectedService.details}</p>
+                  <h3>Key Features:</h3>
+                  <ul>
+                    {selectedService.features.map((feature, index) => (
+                      <motion.li
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        {feature}
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </section>
     </Layout>
    
   )

@@ -1,16 +1,15 @@
-"use client"
-
 import { useEffect, useState, useRef } from "react"
+import { useNavigate } from 'react-router-dom';
 import { motion, useAnimation } from "framer-motion"
 import { FaReact, FaNodeJs, FaPython, FaAws, FaDocker } from "react-icons/fa"
 import { SiKubernetes, SiTypescript, SiMongodb, SiPostgresql, SiRedis, SiGraphql, SiNextdotjs } from "react-icons/si"
 import "../styles/Hero.css"
 import Layout from "../layout/layout"
-import bgimage from '../images/bgimage.jpg'
+import landing from '../images/layout.png'
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
-  const counterRef = useRef(null)
   const counterControls = useAnimation()
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsVisible(true)
@@ -22,14 +21,6 @@ export default function Hero() {
        <div className="landing-page">
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero-background">
-          <img
-            src={bgimage}
-            alt="Hero Background"
-            className="hero-img"
-          />
-          <div className="hero-overlay" />
-        </div>
 
         <div className="container hero-content">
           <div className="hero-text">
@@ -53,7 +44,7 @@ export default function Hero() {
               expectations.
             </motion.p>
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -65,45 +56,16 @@ export default function Hero() {
               <a href="#portfolio" className="cta-button secondary">
                 View Projects
               </a>
-            </motion.div>
+            </motion.div> */}
+            <div className="hero-cta">
+              <button className="btn" onClick={() => navigate("/services")}>Our Services</button>
+              <button className="btn-secondary" onClick={() => navigate("/portfolio")}>View Projects</button>
+            </div>
           </div>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 0 }}
-          animate={{ opacity: 1, y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-          className="scroll-indicator"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M6 9L12 15L18 9"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </motion.div>
-      </section>
-
-      {/* Dynamic Impact Section */}
-      <section className="impact-section">
-        <div className="container">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="section-title"
-          >
-            Our Impact
-          </motion.h2>
-          <div className="impact-grid">
-            <ImpactCard title="Projects Completed" value={150} icon="🚀" />
-            <ImpactCard title="Happy Clients" value={50} icon="😊" />
-            <ImpactCard title="Years of Experience" value={10} icon="🏆" />
-            <ImpactCard title="Team Members" value={25} icon="👥" />
+          <div className="landing-img-div">
+            <div className="landing-img">
+              <img src={landing} alt="" />
+            </div>
           </div>
         </div>
       </section>
@@ -496,8 +458,8 @@ const services = [
     ),
   },
   {
-    title: "Cybersecurity",
-    description: "Comprehensive security solutions to protect your digital assets.",
+    title: "SEO Development",
+    description: "Boost your online visibility with expert SEO development, driving organic traffic and higher search rankings for your business.",
     icon: () => (
       <svg className="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path

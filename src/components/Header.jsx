@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import "../styles/Header.css"; // Ensure this path is correct
-import logo from "../images/finq.png"; // Update with the correct path to your logo
+import "../styles/Header.css";
+import logo from "../images/finq.png";
+import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
+import InfoTwoToneIcon from '@mui/icons-material/InfoTwoTone';
+import MiscellaneousServicesTwoToneIcon from '@mui/icons-material/MiscellaneousServicesTwoTone';
+import PushPinTwoToneIcon from '@mui/icons-material/PushPinTwoTone';
+import ContactPageTwoToneIcon from '@mui/icons-material/ContactPageTwoTone';
 
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -9,11 +14,11 @@ const Header = () => {
   const location = useLocation();
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "Portfolio", path: "/portfolio" },
-    { name: "Contact", path: "/contact" },
+    { name: "Home", path: "/", icon: HomeTwoToneIcon },
+    { name: "About", path: "/about", icon: InfoTwoToneIcon  },
+    { name: "Services", path: "/services", icon: MiscellaneousServicesTwoToneIcon },
+    { name: "Portfolio", path: "/portfolio", icon: PushPinTwoToneIcon },
+    { name: "Contact", path: "/contact", icon: ContactPageTwoToneIcon },
   ];
 
   useEffect(() => {
@@ -57,7 +62,8 @@ const Header = () => {
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {link.name}
+                  <span>{link.name}</span>
+                  {location.pathname === link.path ? <span className="icon-class"><link.icon /></span> : <></>}
                 </Link>
               </li>
             ))}

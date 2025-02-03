@@ -1,17 +1,25 @@
 import React, { useState, useEffect, useRef } from "react"
 import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 import '../styles/Portfolio.css'
 import mobile from '../images/mobile.jpg'
+import repairmate from '../images/repairmate.jpg'
+import movie from '../images/movie.jpg'
+import blockchain from '../images/blockchain.jpg'
+import mantraflex from '../images/mantraflex.jpg'
+import fotogan from '../images/fotogan.jpg'
+import web from '../images/web.jpg'
+import tim from '../images/tim.jpg'
+import climate from '../images/climate.jpg'
+import ios from '../images/ios.jpg'
 import mobileapp from '../images/MobileApp.jpg'
 import uiux from '../images/UIUX.jpg'
 import aiml from '../images/AIML.jpg'
 import webdev from '../images/webdevelopment.jpg'
 import Layout from "../layout/layout";
 import { motion, AnimatePresence } from "framer-motion"
+import { X } from "lucide-react";
+
 const projects = [
   {
     id: "1",
@@ -20,7 +28,6 @@ const projects = [
       "An intelligent mobile app that creates personalized workout and nutrition plans, adapting to user progress and preferences in real-time.",
     image: mobileapp,
     category: "mobile",
-    technologies: ["React Native", "TensorFlow", "Node.js"],
     link: "https://example.com/fitness-app",
   },
   {
@@ -30,7 +37,6 @@ const projects = [
       "A decentralized marketplace leveraging blockchain technology for secure, transparent transactions and supply chain management.",
     image: webdev,
     category: "website",
-    technologies: ["Ethereum", "React", "Solidity"],
     link: "https://example.com/blockchain-ecommerce",
   },
   {
@@ -40,7 +46,6 @@ const projects = [
       "A cutting-edge UI/UX design for controlling smart home devices through augmented reality, offering intuitive gesture-based interactions.",
     image: uiux,
     category: "uiux",
-    technologies: ["ARKit", "Unity", "Sketch"],
     link: "https://example.com/ar-smart-home",
   },
   {
@@ -50,10 +55,104 @@ const projects = [
       "An advanced AI/ML solution that predicts equipment failures in manufacturing plants, significantly reducing downtime and maintenance costs.",
     image: aiml,
     category: "aiml",
-    technologies: ["Python", "TensorFlow", "AWS SageMaker"],
     link: "https://example.com/predictive-maintenance",
   }
 ]
+
+const projectData = {
+  projects: [
+    {
+      id: "mobile-app-1",
+      category: "Mobile Application",
+      title: "Mobile Application Development",
+      description: "An intelligent mobile app that creates personalized workout and nutrition plans, adapting to user progress and preferences in real-time.",
+      image: mobile,
+      technologies: ["React Native", "TensorFlow", "Node.js"],
+      link: "https://example.com/fitness-app"
+    },
+    {
+      id: "repairmate-ios",
+      category: "Mobile Application",
+      title: "RepairMate iOS App",
+      description: "A user-friendly iOS app for booking mobile repair services, connecting customers with local technicians in real-time.",
+      image: repairmate,
+      technologies: ["Swift", "Firebase", "CoreData"],
+      link: "https://example.com/repairmate-ios"
+    },
+    {
+      id: "movie-ticket-booking",
+      category: "Mobile Application",
+      title: "Movie Ticket Booking App (Cross-Platform)",
+      description: "A cross-platform app allowing users to book movie tickets, browse showtimes, and view theater details.",
+      image: movie,
+      technologies: ["Flutter", "Dart", "Firebase"],
+      link: "https://example.com/movie-ticket-booking"
+    },
+    {
+      id: "blockchain-ecommerce",
+      category: "Web Development",
+      title: "Blockchain E-commerce Platform",
+      description: "A decentralized marketplace leveraging blockchain technology for secure, transparent transactions and supply chain management.",
+      image: blockchain,
+      technologies: ["Ethereum", "React", "Solidity"],
+      link: "https://example.com/blockchain-ecommerce"
+    },
+    {
+      id: "mantraflex",
+      category: "Web Development",
+      title: "Mantraflex - Physiotherapy Appointment Booking Website",
+      description: "A website designed for booking physiotherapy appointments, offering a seamless experience for both customers and physiotherapists.",
+      image: mantraflex,
+      technologies: ["React", "Node.js", "Firebase"],
+      link: "https://example.com/mantraflex"
+    },
+    {
+      id: "fotogan-consulting",
+      category: "Web Development",
+      title: "Fotogan Digital Consulting App (WordPress)",
+      description: "A WordPress-based platform providing digital consulting services, offering user-friendly interfaces for clients to book consultations.",
+      image: fotogan,
+      technologies: ["WordPress", "PHP", "MySQL"],
+      link: "https://example.com/fotogan-consulting"
+    },
+    {
+      id: "b12give",
+      category: "Web Development",
+      title: "B12Give - React Native, MUI & Bootstrap",
+      description: "A React Native-based mobile application for surplus food recovery, using MUI and Bootstrap for a responsive user interface.",
+      image: web,
+      technologies: ["React Native", "MUI", "Bootstrap"],
+      link: "https://example.com/b12give"
+    },
+    {
+      id: "tim-hortons-redesign",
+      category: "UI/UX Design",
+      title: "Tim Horttons Redesign",
+      description: "A complete redesign of Tim Hortons' mobile app UI, focusing on improving user experience and visual aesthetics.",
+      image: tim,
+      technologies: ["Figma", "Sketch", "Adobe XD"],
+      link: "https://example.com/tim-hortons-redesign"
+    },
+    {
+      id: "climate-app",
+      category: "UI/UX Design",
+      title: "Climate App UI/UX Design",
+      description: "A UI/UX design for a climate app that provides real-time weather and environmental data with an interactive, user-friendly interface.",
+      image: climate,
+      technologies: ["Figma", "Adobe XD", "Sketch"],
+      link: "https://example.com/climate-app"
+    },
+    {
+      id: "ecosmart-ios-watch-app",
+      category: "UI/UX Design",
+      title: "EcoSmart iOS Watch App Design",
+      description: "A UI/UX design for an iOS watch app focused on sustainable living, offering users tips and eco-friendly alternatives.",
+      image: ios,
+      technologies: ["Figma", "Sketch", "Illustrator"],
+      link: "https://example.com/ecosmart-ios-watch-app"
+    }
+  ]
+};
 
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState("all")
@@ -121,44 +220,63 @@ const Portfolio = () => {
                 <div className="portfolio-item-content">
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
-                  <div className="technologies">
-                    {project.technologies.map((tech, index) => (
-                      <span key={index} className="tech-tag">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
         {selectedProject && (
-          <Dialog
-            open={open}
-            onClose={handleClose}
-            scroll='paper'
-            aria-labelledby="scroll-dialog-title"
-            aria-describedby="scroll-dialog-description"
+          <motion.div
+            className="service-details-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
           >
-            <DialogContent dividers={scroll === 'paper'} sx={{ backgroundColor: 'black' }}>
+            <motion.div
+              className="service-details"
+              initial={{
+                scale: 0.7,
+                opacity: 0,
+                y: 50,
+              }}
+              animate={{
+                scale: 1,
+                opacity: 1,
+                y: 0,
+              }}
+              exit={{
+                scale: 0.7,
+                opacity: 0,
+                y: 50,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              }}
+            >
+              <button className="close-btn" onClick={() => setSelectedProject(null)}>
+                <X size={24} />
+              </button>
               <div className="dialog-box">
                 <h2>Mobile Applications</h2>
                 <div className="samples">
                   {
-                    [1, 2, 3, 4].map((i, index) => {
+                    projectData.projects.map((i, index) => {
                       return (
                         <div key={index} className="card">
                           <div className="card-img">
-                            <img src={mobile} />
+                            <img src={i.image} />
                           </div>
-                          <h3>Health Tracking App</h3>
-                          <div className="skills">
-                            {["React Native", "Node js", "Firebase"].map((i) => {
-                              return (
-                                <div className="skill">{i}</div>
-                              )
-                            })}
+                          <div className="card-content">
+                            <h3>{i.title}</h3>
+                            <div className="skills">
+                              {i.technologies.map((t) => {
+                                return (
+                                  <div className="skill">{t}</div>
+                                )
+                              })}
+                            </div>
                           </div>
                         </div>
                       )
@@ -166,8 +284,8 @@ const Portfolio = () => {
                   }
                 </div>
               </div>
-            </DialogContent>
-          </Dialog>
+            </motion.div>
+          </motion.div>
         )}
       </section>
     </Layout>

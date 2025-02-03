@@ -4,13 +4,11 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 20px 0;
-  backdrop-filter: blur(5px);
+  padding: 10px 0;
+  backdrop-filter: blur(15px);
   transition: background-color 0.3s ease;
-}
-
-.header.sticky {
-  /* background-color: rgba(0, 0, 0, 0.95); */
+  border-bottom: 1px solid #28282B;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .container {
@@ -28,6 +26,11 @@
 .logo {
   height: 50px; /* Adjust logo height */
   width: auto;  /* Keep width proportional */
+  transition: 0.4s;
+}
+
+.logo:hover{
+  transform: scale(1.1);
 }
 
 .nav-toggle {
@@ -40,7 +43,7 @@
 
 .nav-links {
   display: flex;
-  gap: 40px;
+  gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -50,11 +53,36 @@
   color: #ffffff;
   font-size: 1.1rem;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding-top: 15px;
+  padding-bottom: 10px;
 }
 
-.nav-link:hover,
+.icon-class{
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+}
+
 .nav-link.active {
+  background-color: rgba(40, 40, 43, 0.9);
+  border-radius: 15rem;
+  padding: 5px;
+  padding-left: 10px;
+  margin: 5px;
+  margin-left: 0px;
+  margin-right: 0px;
+  backdrop-filter: blur(10px);
   color: #4a90e2;
 }
 
@@ -139,6 +167,15 @@
 
   .nav-link {
     font-size: 1.3rem;
+    transition: 0.3s;
+  }
+
+  .nav-link:hover{
+    transform: scale(1.15);
+  }
+
+  .nav-link.active {
+    margin: 0;
   }
 
   .mobile-logo {
