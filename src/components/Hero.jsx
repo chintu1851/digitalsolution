@@ -5,8 +5,9 @@ import { motion, useAnimation } from "framer-motion"
 import { FaReact, FaNodeJs, FaPython, FaAws, FaDocker } from "react-icons/fa"
 import { SiKubernetes, SiTypescript, SiMongodb, SiPostgresql, SiRedis, SiGraphql, SiNextdotjs } from "react-icons/si"
 import "../styles/Hero.css"
+
 import Layout from "../layout/layout"
-import bgimage from '../images/bgimg2.jpg'
+import bgimage from '../images/bgit.jpg'
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
   const counterRef = useRef(null)
@@ -230,8 +231,7 @@ export default function Hero() {
         {/* Team Section */}
         <TeamSection />
 
-        {/* Contact Section */}
-        <ContactSection />
+       
       </div>
     </Layout>
   )

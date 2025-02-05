@@ -275,7 +275,7 @@
   border-top-right-radius: 1rem;
 }
 
-.card-content{
+.card-content {
   margin: 10px;
 }
 
@@ -306,7 +306,7 @@
   .section-title {
     font-size: 2rem;
     margin-bottom: 50px;
-    margin-top: 5rem;
+    margin-top: 1rem;
   }
 
   .portfolio-grid {
@@ -324,7 +324,7 @@
 
 @media (max-width: 480px) {
   .section-title {
-    margin-top: 5rem;
+    margin-top: 1rem;
     font-size: 2rem;
     margin-bottom: 40px;
   }

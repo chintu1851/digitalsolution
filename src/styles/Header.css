@@ -4,13 +4,11 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 20px 0;
-  backdrop-filter: blur(5px);
+  padding: 10px 0;
+  backdrop-filter: blur(15px);
   transition: background-color 0.3s ease;
-}
-
-.header.sticky {
-  background-color: rgba(0, 0, 0, 0.95);
+  border-bottom: 1px solid #28282B;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .container {
@@ -26,8 +24,13 @@
 }
 
 .logo {
-  height: 50px;
-  width: auto;
+  height: 70px; /* Adjust logo height */
+  width: auto;  /* Keep width proportional */
+  transition: 0.4s;
+}
+
+.logo:hover{
+  transform: scale(1.1);
 }
 
 .nav-toggle {
@@ -40,7 +43,7 @@
 
 .nav-links {
   display: flex;
-  gap: 40px;
+  gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -50,45 +53,41 @@
   color: #ffffff;
   font-size: 1.1rem;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding-top: 15px;
+  padding-bottom: 10px;
 }
 
-.nav-link:hover,
+.icon-class{
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+}
+
 .nav-link.active {
+  background-color: rgba(40, 40, 43, 0.9);
+  border-radius: 15rem;
+  padding: 5px;
+  padding-left: 10px;
+  margin: 5px;
+  margin-left: 0px;
+  margin-right: 0px;
+  backdrop-filter: blur(10px);
   color: #4a90e2;
 }
 
-/* Services dropdown styles */
-.services-dropdown {
-  position: relative;
-}
-
-.services-dropdown-content {
+.mobile-logo {
   display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.95);
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  border-radius: 4px;
-}
-
-.services-dropdown:hover .services-dropdown-content {
-  display: block;
-}
-
-.services-dropdown-content a {
-  color: #ffffff;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  transition: background-color 0.3s ease;
-}
-
-.services-dropdown-content a:hover {
-  background-color: rgba(74, 144, 226, 0.1);
 }
 
 @media (max-width: 968px) {
@@ -110,6 +109,7 @@
     border-radius: 3px;
     opacity: 1;
     left: 0;
+    transform: rotate(0deg);
     transition: .25s ease-in-out;
   }
 
@@ -150,11 +150,9 @@
     background-color: rgba(0, 0, 0, 0.95);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     transition: right 0.3s ease;
-    padding-top: 60px;
-    overflow-y: auto;
   }
 
   .nav-menu.open {
@@ -165,62 +163,23 @@
     flex-direction: column;
     gap: 20px;
     text-align: center;
-    width: 100%;
   }
 
   .nav-link {
     font-size: 1.3rem;
-    padding: 10px 0;
-    display: block;
+    transition: 0.3s;
   }
 
-  /* Mobile logo styles */
+  .nav-link:hover{
+    transform: scale(1.15);
+  }
+
+  .nav-link.active {
+    margin: 0;
+  }
+
   .mobile-logo {
     display: block;
-    margin-bottom: 30px;
-  }
-
-  .mobile-logo img {
-    height: 40px;
-    width: auto;
-  }
-
-  /* Mobile services dropdown styles */
-  .services-dropdown {
-    width: 100%;
-  }
-
-  .services-dropdown-content {
-    position: static;
-    display: none;
-    background-color: transparent;
-    box-shadow: none;
-    width: 100%;
-  }
-
-  .services-dropdown.open .services-dropdown-content {
-    display: block;
-  }
-
-  .services-dropdown-content a {
-    padding: 10px 0;
-    font-size: 1.1rem;
-  }
-
-  /* Ensure the Services main link is clickable on mobile */
-  .services-dropdown > .nav-link {
-    display: block;
-    width: 100%;
-  }
-
-  /* Style for the Services dropdown toggle */
-  .services-dropdown > .nav-link::after {
-    content: "\25BC";
-    margin-left: 5px;
-    font-size: 0.8em;
-  }
-
-  .services-dropdown.open > .nav-link::after {
-    content: "\25B2";
+    margin-top: 40px;
   }
 }
