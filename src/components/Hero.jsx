@@ -5,7 +5,11 @@ import { motion, useAnimation } from "framer-motion"
 import { FaReact, FaNodeJs, FaPython, FaAws, FaDocker } from "react-icons/fa"
 import { SiKubernetes, SiTypescript, SiMongodb, SiPostgresql, SiRedis, SiGraphql, SiNextdotjs } from "react-icons/si"
 import "../styles/Hero.css"
-
+import avatar1 from '../images/avatar1.jpg'
+import avatar2 from '../images/avatar2.jpg'
+import avatar3 from '../images/avatar3.jpg'
+import avatar4 from '../images/avatar4.jpg'
+import avatar5 from '../images/avatar5.jpg'
 import Layout from "../layout/layout"
 import bgimage from '../images/bgit.jpg'
 export default function Hero() {
@@ -39,7 +43,7 @@ export default function Hero() {
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.4 }}
                 className="hero-title"
               >
                 Intuition Engineered. Innovation Delivered
@@ -48,7 +52,7 @@ export default function Hero() {
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+                transition={{ duration: 0.4, delay: 0.3 }}
                 className="hero-description"
               >
                 From brainstorm to breakthroughs, we power progress with innovation that thinks ahead. At Intuiqo, we fuse intuition with technology to craft solutions that don’t just work—they evolve.
@@ -57,7 +61,7 @@ export default function Hero() {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                transition={{ duration: 0.4, delay: 0.6 }}
                 className="hero-cta"
               >
                 <a href="/services" className="cta-button primary">
@@ -95,7 +99,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               className="section-title"
             >
               Our Impact
@@ -116,7 +120,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               className="section-title"
             >
               Our Expertise
@@ -148,7 +152,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               className="section-title"
             >
               Our Tech Stack
@@ -176,7 +180,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               className="section-title"
             >
               Featured Projects
@@ -190,7 +194,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  transition={{ duration: 0.4, delay: index * 0.2 }}
                   className="project-block"
                 >
                   <img src={project.image || "/placeholder.svg"} alt={project.title} />
@@ -219,7 +223,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               className="section-title"
             >
               What Our Clients Say
@@ -265,7 +269,7 @@ const ImpactCard = ({ title, value, icon }) => {
       initial={{ opacity: 0, scale: 0.5 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.4 }}
     >
       <div className="impact-icon">{icon}</div>
       <h3 className="impact-value">{count}</h3>
@@ -290,7 +294,7 @@ const ProcessSection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
           className="section-title"
         >
           Our Process
@@ -303,7 +307,7 @@ const ProcessSection = () => {
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              transition={{ duration: 0.4, delay: index * 0.2 }}
             >
               <div className="process-content">
                 <h3>{process.title}</h3>
@@ -318,12 +322,15 @@ const ProcessSection = () => {
 }
 
 const TeamSection = () => {
-  const teamMembers = [
-    { name: "John Doe", role: "CEO & Founder", image: "https://randomuser.me/api/portraits/men/1.jpg" },
-    { name: "Jane Smith", role: "CTO", image: "https://randomuser.me/api/portraits/women/2.jpg" },
-    { name: "Mike Johnson", role: "Lead Developer", image: "https://randomuser.me/api/portraits/men/3.jpg" },
-    { name: "Emily Brown", role: "UX Designer", image: "https://randomuser.me/api/portraits/women/4.jpg" },
-  ]
+const teamMembers = [
+  { name: "Chintan Patel", role: "CEO", image: avatar1 },
+  { name: "Vishal Patel", role: "CTO", image: avatar2 },
+  { name: "Zeel Malaviya", role: "Project Manager", image: avatar3 },
+  { name: "Harshil Vaghani", role: "Senior Frontend/UIUX Designer", image: avatar4 },
+  { name: "Parth Vasoya", role: "Senior Full Stack Developer", image: avatar5 },
+
+];
+
 
   return (
     <section className="team-section">
@@ -332,7 +339,7 @@ const TeamSection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
           className="section-title"
         >
           Meet Our Team
@@ -345,7 +352,7 @@ const TeamSection = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              transition={{ duration: 0.4}}
             >
               <img src={member.image || "/placeholder.svg"} alt={member.name} className="team-member-image" />
               <h3>{member.name}</h3>
@@ -366,7 +373,7 @@ const ContactSection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
           className="section-title"
         >
           Get In Touch
@@ -377,7 +384,7 @@ const ContactSection = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
           >
             <h3>Contact Information</h3>
             <p>Email: info@example.com</p>
@@ -389,7 +396,7 @@ const ContactSection = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
           >
             <input type="text" placeholder="Your Name" required />
             <input type="email" placeholder="Your Email" required />

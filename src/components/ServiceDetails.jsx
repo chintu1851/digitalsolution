@@ -31,7 +31,7 @@ const ServiceDetail = () => {
                             <motion.h2
                                 initial={{ opacity: 0, y: -50 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.2 }}
+                                transition={{ duration: 0.4, delay: 0.2 }}
                                 className="section-title"
                             >
                                 <h1>{service.title}</h1>
@@ -116,10 +116,7 @@ const ServiceDetail = () => {
                         <div className="growth-content">
                             <h2>Grow Your Business with {service.title}</h2>
                             <p>Transform your digital presence and achieve sustainable growth with our expert services.</p>
-                            <Link to="/contact" className="cta-button">
-                                Start Your Journey
-                                <ChevronRight size={20} />
-                            </Link>
+                       
                         </div>
                     </section>
                 </div>

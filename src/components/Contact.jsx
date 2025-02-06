@@ -37,7 +37,7 @@ const Contact = () => {
           <motion.h2
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
             className="section-title"
           >
             Get in Touch
@@ -48,7 +48,7 @@ const Contact = () => {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               className="contact-info"
             >
               <h3>Let's Connect</h3>
@@ -90,7 +90,7 @@ const Contact = () => {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               className="contact-form-container"
             >
               <form className="contact-form" id="contact-form" onSubmit={handleSubmit}>

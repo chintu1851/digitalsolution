@@ -29,7 +29,7 @@ const About = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="section-title"
           >
             About Intuiqo
@@ -40,7 +40,7 @@ const About = () => {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               className="about-text"
             >
               <p>
@@ -57,7 +57,7 @@ const About = () => {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               className="about-image"
             >
               <img
@@ -74,7 +74,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
+                transition={{ duration: 0.4, delay: index * 0.2 }}
                 className="stat-item"
               >
                 <div className="stat-icon">{stat.icon}</div>
@@ -89,7 +89,7 @@ const About = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               className="mission"
             >
               <h3>Our Mission</h3>
@@ -102,7 +102,7 @@ const About = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
               className="vision"
             >
               <h3>Our Vision</h3>
@@ -116,7 +116,7 @@ const About = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="about-timeline"
           >
             <h3>Our Journey</h3>
