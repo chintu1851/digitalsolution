@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useEffect} from "react"
 import { motion } from "framer-motion"
 import { FiGlobe, FiUsers, FiTrendingUp } from "react-icons/fi"
 import "../styles/About.css"
@@ -18,15 +18,18 @@ const About = () => {
     { year: 2022, event: "Opened new R&D center" },
   ]
 
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+
   return (
     <Layout>
   <section id="about" className="about">
       <div className="container">
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="section-title"
         >
           About Intuiqo

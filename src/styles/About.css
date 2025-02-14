@@ -13,9 +13,10 @@
   left: 0;
   right: 0;
   bottom: 0;
- 
+  background: url("../images/bgit.jpg") no-repeat center center;
   background-size: cover;
-  opacity: 0.095;
+  background-position: center;
+  opacity: 0.05;
   z-index: 0;
 }
 
@@ -27,15 +28,16 @@
   z-index: 1;
 }
 
-.about .section-title {
+.section-title {
   text-align: center;
   margin-bottom: 40px;
   font-size: 2.5rem;
   color: #fff;
   position: relative;
+  font-family: "Header";
 }
 
-.about .section-title::after {
+.section-title::after {
   content: "";
   display: block;
   width: 50px;
@@ -90,6 +92,7 @@
 }
 
 .stat-value {
+  font-family: "Header";
   font-size: 2rem;
   font-weight: bold;
   color: #fff;
@@ -118,6 +121,7 @@
 
 .mission h3,
 .vision h3 {
+  font-family: "Header";
   color: #4a90e2;
   font-size: 1.5rem;
   margin-bottom: 15px;
@@ -135,6 +139,7 @@
 }
 
 .about-timeline h3 {
+  font-family: "Header";
   color: #4a90e2;
   font-size: 1.8rem;
   margin-bottom: 30px;
@@ -212,8 +217,9 @@
 }
 
 @media (max-width: 768px) {
+
   .about .section-title {
-     margin-top: 5rem;
+    margin-top: 3rem;
     font-size: 2rem;
   }
 
@@ -268,7 +274,7 @@
 
 @media (max-width: 480px) {
   .about .section-title {
-     margin-top: 5rem;
+    margin-top: 2rem;
     font-size: 2rem;
   }
 

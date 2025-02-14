@@ -1,5 +1,5 @@
 .portfolio {
-  background-color: #121212;
+  background-color: #0a0a0a;
   padding: 80px 0;
   position: relative;
   overflow: hidden;
@@ -13,9 +13,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80") no-repeat center center;
+  background: url("../images/bgit.jpg") no-repeat center center;
   background-size: cover;
-  opacity: 0.05;
+  opacity: 0.2;
   z-index: 0;
 }
 
@@ -25,14 +25,6 @@
   padding: 0 20px;
   position: relative;
   z-index: 1;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-  color: #fff;
-  position: relative;
 }
 
 .section-subtitle {
@@ -81,7 +73,8 @@
 }
 
 .portfolio-item {
-  background: rgba(255, 255, 255, 0.05);
+  background-color: rgba(105, 105, 105, 0.2);
+  backdrop-filter: blur(10px);
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -117,9 +110,14 @@
 }
 
 .portfolio-item h3 {
-  color: #3b82f6;
+  color: #4a90e2;
   font-size: 1.5rem;
   margin-bottom: 15px;
+}
+
+.link-icon{
+  margin-left: 5px;
+  color: white;
 }
 
 .portfolio-item p {
@@ -306,7 +304,7 @@
   .section-title {
     font-size: 2rem;
     margin-bottom: 50px;
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 
   .portfolio-grid {
@@ -324,7 +322,7 @@
 
 @media (max-width: 480px) {
   .section-title {
-    margin-top: 5rem;
+    margin-top: 2rem;
     font-size: 2rem;
     margin-bottom: 40px;
   }

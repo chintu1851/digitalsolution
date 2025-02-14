@@ -1,7 +1,20 @@
-/* Hero Section */
+.landing-page{
+  padding-top: 10rem;
+}
+
+.bg-img{
+  background-position: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .hero {
-  position: relative;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,57 +37,74 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
-.hero-content {
+.hero-text{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: left;
+  text-align: center;
   color: #fff;
-  padding: 0 20px;
-  gap: 50px;
+  
+  width: 100%;
 }
 
 .hero-title {
-  font-size: 4rem;
+  color: #1E90FF;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
   font-family: "Header";
+  text-shadow: 10px 10px 30px #696969;
 }
 
 .hero-description {
-  font-size: 1.2rem;
   margin-bottom: 2rem;
+  text-shadow: 3px 3px 20px #696969;
 }
 
 .hero-cta {
   display: flex;
-  justify-content: start;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .btn{
-  border-radius: 1rem;
+  border-radius: 2rem;
   padding: 1rem;
-  color: #fff;
+  color: white;
   border: none;
-  background-color: #4a90e2;
+  background-color: rgba(74, 144, 226, 0.6);
+  backdrop-filter: blur(10px);
   font-size: large;
+  cursor: pointer;
 }
 
 .btn-secondary{
-  border-radius: 1rem;
+  border-radius: 2rem;
   padding: 1rem;
   color: #fff;
   border: none;
+  background-color: #28282B;
   backdrop-filter: blur(10px);
   font-size: large;
 }
 
 .landing-img-div{
+  width: 30%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.landing-img{
+  width: 100%;
+  height: fit-content;
+}
+
+.landing-img img{
+  width: 100%;
+  height: 100%;
 }
 
 .impact-section {
@@ -120,38 +150,52 @@
 }
 
 /* Services Section */
-.services {
-  background-color: #111;
+.expertise-div {
+  background: transparent;
   padding: 4rem 0;
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.expertise-title{
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #fff;
+  position: relative;
+}
+
+.expertise-grid {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
   margin-top: 2rem;
 }
 
-.service-item {
-  background-color: rgba(255, 255, 255, 0.05);
+.expertise-item {
+  background-color: rgba(105, 105, 105, 0.2);
+  backdrop-filter: blur(10px);
   border-radius: 10px;
   padding: 2rem;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
+  width: 300px;
 }
 
-.service-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.service-icon {
+.expertise-icon {
   width: 50px;
   height: 50px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-/* Tech Stack Section */
+.expertise-item h3{
+  margin-bottom: 1rem;
+  color: #4a90e2;
+}
+
 .tech-stack {
   background-color: #0a0a0a;
   padding: 4rem 0;
@@ -230,10 +274,17 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
+  opacity: 0.85;
 }
 
 .project-info {
   padding: 1.5rem;
+}
+
+.project-info h3{
+  font-family: "Header";
+  color: #4a90e2;
+  margin-bottom: 10px;
 }
 
 .portfolio-cta {
@@ -291,6 +342,7 @@
 }
 
 .process-content h3 {
+  font-family: "Header";
   margin-bottom: 0.5rem;
   color: #4a90e2;
 }
@@ -328,21 +380,20 @@
 
 .testimonial-content {
   background: rgba(255, 255, 255, 0.05);
-  border: 2px solid #4a90e2;
+  border: 2px solid #696969;
   border-radius: 10px;
   padding: 2rem;
   position: relative;
   max-width: 600px;
-  margin: 0 auto;
 }
 
 .quote-icon {
   position: absolute;
-  top: -20px;
+  top: -10px;
   left: 20px;
   font-size: 4rem;
   color: #4a90e2;
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 .testimonial-content p {
@@ -367,6 +418,7 @@
 }
 
 .author-info h4 {
+  font-family: "Header";
   margin: 0;
   color: #4a90e2;
   font-size: 1.1rem;
@@ -375,28 +427,6 @@
 .author-info span {
   font-size: 0.9rem;
   color: #ccc;
-}
-
-.testimonial-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #4a4a4a;
-  margin: 0 5px;
-  padding: 0;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.dot.active {
-  background-color: #4a90e2;
 }
 
 
@@ -427,6 +457,8 @@
 }
 
 .team-member h3 {
+  font-family: "Header";
+  color: #4a90e2;
   margin-bottom: 0.5rem;
 }
 
@@ -472,8 +504,36 @@
   resize: vertical;
 }
 
+@media (max-width: 1150px) {
+
+  .bg-img{
+    background-position: center;
+  }
+
+  .hero-content{
+    flex-direction: column;
+  }
+
+  .hero-text{
+    width: 100%;
+  }
+
+  .landing-img-div{
+    width: 80%;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+
+  .bg-img{
+    background-position: center;
+  }
+
+  .hero-content{
+    flex-direction: column;
+  }
+
   .team-section {
     /* margin-top: 20rem; */
     background-color: #0a0a0a;
@@ -542,10 +602,6 @@
     font-size: 2rem
   }
 
-  .hero-description {
-    font-size: 1.2rem;
-  }
-
   .cta-button {
     font-size: 0.9rem;
   }
@@ -582,6 +638,10 @@
     font-size: 1rem;
   }
 
+  .hero-cta {
+    width: 100%;
+  }
+
   .cta-button {
     padding: 0.5rem 1rem;
   }
@@ -605,8 +665,9 @@
   .process-timeline {
     gap: 1.5rem;
   }
+
   .testimonial-content {
-    padding: 1.5rem;
+    
   }
 
   .testimonial-content p {

@@ -7,7 +7,6 @@
   padding: 10px 0;
   backdrop-filter: blur(15px);
   transition: background-color 0.3s ease;
-  border-bottom: 1px solid #28282B;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -24,8 +23,8 @@
 }
 
 .logo {
-  height: 50px; /* Adjust logo height */
-  width: auto;  /* Keep width proportional */
+  height: 60px;
+  width: auto;
   transition: 0.4s;
 }
 
@@ -70,8 +69,9 @@
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(5px);
+  color: #4a90e2;
 }
 
 .nav-link.active {
@@ -82,8 +82,9 @@
   margin: 5px;
   margin-left: 0px;
   margin-right: 0px;
+  background-color: rgba(74, 144, 226, 0.2);
   backdrop-filter: blur(10px);
-  color: #4a90e2;
+  color: white;
 }
 
 .mobile-logo {
