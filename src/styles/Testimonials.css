@@ -1,0 +1,126 @@
+.testimonialSection{
+  width: 100%;
+  height: fit-content;
+  padding: 1rem;
+}
+
+.sliderContainer{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navButton{
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background-color: rgba(59, 130, 246, 0.1);
+  border: 1px solid #DCDCDC;
+  color: #DCDCDC;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.prevButton{
+  left: 0px;
+}
+
+.nextButton{
+  right: 0px;
+}
+
+.sliderWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  overflow: hidden;
+}
+
+.slider{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: fit-content;
+  transition: 0.5s;
+}
+
+.testimonialCard{
+  width: 400px;
+  height: 310px;
+  border-radius: 10px;
+  padding: 2rem;
+  flex-shrink: 0;
+  backdrop-filter: blur(10px);
+}
+
+.quoteIcon{
+
+}
+
+.content{
+
+}
+
+.author{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.avatar{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.authorInfo{
+  display: flex;
+  flex-direction: column;
+}
+
+.name{
+  color: white;
+}
+
+.role{
+
+}
+
+.dots{
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #475569;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeDot{
+  background-color: #DCDCDC;
+  transform: scale(1.2);
+}

@@ -1,9 +1,13 @@
 .portfolio {
-  background-color: #121212;
+  background-color: #0a0a0a;
   padding: 80px 0;
   position: relative;
   overflow: hidden;
+<<<<<<< HEAD
   margin-top: 1rem;
+=======
+  margin-top: 5rem;
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
 }
 
 .portfolio::before {
@@ -13,8 +17,12 @@
   left: 0;
   right: 0;
   bottom: 0;
+<<<<<<< HEAD
+=======
+  background: url("../images/bgit.jpg") no-repeat center center;
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
   background-size: cover;
-  opacity: 0.05;
+  opacity: 0.2;
   z-index: 0;
 }
 
@@ -26,6 +34,7 @@
   z-index: 1;
 }
 
+<<<<<<< HEAD
 .section-title {
     margin-top: 2rem;
   text-align: center;
@@ -35,6 +44,8 @@
   position: relative;
 }
 
+=======
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
 .section-subtitle {
   text-align: center;
   color: #cccccc;
@@ -81,7 +92,8 @@
 }
 
 .portfolio-item {
-  background: rgba(255, 255, 255, 0.05);
+  background-color: rgba(105, 105, 105, 0.2);
+  backdrop-filter: blur(10px);
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -117,9 +129,14 @@
 }
 
 .portfolio-item h3 {
-  color: #3b82f6;
+  color: #4a90e2;
   font-size: 1.5rem;
   margin-bottom: 15px;
+}
+
+.link-icon{
+  margin-left: 5px;
+  color: white;
 }
 
 .portfolio-item p {
@@ -275,7 +292,11 @@
   border-top-right-radius: 1rem;
 }
 
+<<<<<<< HEAD
 .card-content {
+=======
+.card-content{
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
   margin: 10px;
 }
 
@@ -306,7 +327,11 @@
   .section-title {
     font-size: 2rem;
     margin-bottom: 50px;
+<<<<<<< HEAD
     margin-top: 1rem;
+=======
+    margin-top: 3rem;
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
   }
 
   .portfolio-grid {
@@ -324,7 +349,11 @@
 
 @media (max-width: 480px) {
   .section-title {
+<<<<<<< HEAD
     margin-top: 1rem;
+=======
+    margin-top: 2rem;
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
     font-size: 2rem;
     margin-bottom: 40px;
   }

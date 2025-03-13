@@ -18,6 +18,7 @@ import Layout from "../layout/layout";
 import { motion } from "framer-motion";
 import { X } from "lucide-react";
 import web1 from '../images/web1.png'
+<<<<<<< HEAD
 const projects = [
   {
     id: "1",
@@ -30,6 +31,13 @@ const projects = [
   },
   {
     id: "2",
+=======
+import { SquareArrowOutUpRight } from 'lucide-react';
+
+const projects = [
+  {
+    id: "1",
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
     title: "Web Application development",
     description:
       "A decentralized marketplace leveraging blockchain technology for secure, transparent transactions and supply chain management.",
@@ -38,6 +46,7 @@ const projects = [
     link: "https://example.com/blockchain-ecommerce",
   },
   {
+<<<<<<< HEAD
     id: "3",
     title: "UI/UX design",
     description:
@@ -48,6 +57,9 @@ const projects = [
   },
   {
     id: "4",
+=======
+    id: "2",
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
     title: "AI/ML",
     description:
       "An advanced AI/ML solution that predicts equipment failures in manufacturing plants, significantly reducing downtime and maintenance costs.",
@@ -55,6 +67,27 @@ const projects = [
     category: "aiml",
     link: "https://example.com/predictive-maintenance",
   },
+<<<<<<< HEAD
+=======
+  {
+    id: "3",
+    title: "Mobile Application development",
+    description:
+      "An intelligent mobile app that creates personalized workout and nutrition plans, adapting to user progress and preferences in real-time.",
+    image: mobileapp,
+    category: "mobile",
+    link: "https://example.com/fitness-app",
+  },
+  {
+    id: "4",
+    title: "UI/UX design",
+    description:
+      "A cutting-edge UI/UX design for controlling smart home devices through augmented reality, offering intuitive gesture-based interactions.",
+    image: uiux,
+    category: "uiux",
+    link: "https://example.com/ar-smart-home",
+  },
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
 ];
 
 const projectData = {
@@ -170,6 +203,64 @@ const projectData = {
       link: "https://example.com/ecosmart-ios-watch-app",
       detailImage:''
     },
+<<<<<<< HEAD
+=======
+    {
+      id: "ecosmart-ios-watch-app",
+      category: "aiml",
+      title: "Personalised AI assistance",
+      description:
+        "A UI/UX design for an iOS watch app focused on sustainable living, offering users tips and eco-friendly alternatives.",
+      image: ios,
+      technologies: ["Figma", "Sketch", "Illustrator"],
+      link: "https://example.com/ecosmart-ios-watch-app",
+      detailImage:''
+    },
+    {
+      id: "ecosmart-ios-watch-app",
+      category: "aiml",
+      title: "Agentice AI",
+      description:
+        "A UI/UX design for an iOS watch app focused on sustainable living, offering users tips and eco-friendly alternatives.",
+      image: ios,
+      technologies: ["Figma", "Sketch", "Illustrator"],
+      link: "https://example.com/ecosmart-ios-watch-app",
+      detailImage:''
+    },
+    {
+      id: "ecosmart-ios-watch-app",
+      category: "aiml",
+      title: "Animated AI",
+      description:
+        "A UI/UX design for an iOS watch app focused on sustainable living, offering users tips and eco-friendly alternatives.",
+      image: ios,
+      technologies: ["Figma", "Sketch", "Illustrator"],
+      link: "https://example.com/ecosmart-ios-watch-app",
+      detailImage:''
+    },
+    {
+      id: "ecosmart-ios-watch-app",
+      category: "aiml",
+      title: "Project Link Generation",
+      description:
+        "A UI/UX design for an iOS watch app focused on sustainable living, offering users tips and eco-friendly alternatives.",
+      image: ios,
+      technologies: ["Figma", "Sketch", "Illustrator"],
+      link: "https://example.com/ecosmart-ios-watch-app",
+      detailImage:''
+    },
+    {
+      id: "ecosmart-ios-watch-app",
+      category: "aiml",
+      title: "EcoSmart iOS Watch App Design",
+      description:
+        "A UI/UX design for an iOS watch app focused on sustainable living, offering users tips and eco-friendly alternatives.",
+      image: ios,
+      technologies: ["Figma", "Sketch", "Illustrator"],
+      link: "https://example.com/ecosmart-ios-watch-app",
+      detailImage:''
+    },
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
   ],
 };
 
@@ -179,9 +270,17 @@ const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null); // For category-wise projects
   const [selectedImage, setSelectedImage] = useState(null); // For image modal
   const [animatedItems, setAnimatedItems] = useState([]);
+<<<<<<< HEAD
  useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+=======
+
+ useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -205,18 +304,27 @@ const Portfolio = () => {
     setSelectedCategory(category);
   };
 
+<<<<<<< HEAD
   const handleProjectClick = (project) => {
     setSelectedProject(project); // Set the selected project
   };
 
   const handleImageClick = (image) => {
     setSelectedImage(image); // Set the selected image
+=======
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
   };
 
   const handleClose = () => {
     setSelectedCategory(null);
     setSelectedProject(null);
+<<<<<<< HEAD
     setSelectedImage(null); // Reset selected image
+=======
+    setSelectedImage(null);
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
   };
 
   const getCategoryProjects = (category) => {
@@ -237,9 +345,12 @@ const Portfolio = () => {
           >
             Innovative Portfolio
           </motion.h2>
+<<<<<<< HEAD
           <p className="section-subtitle">
             Explore our cutting-edge projects across various domains
           </p>
+=======
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
           <div className="portfolio-grid">
             {projects.map((project) => (
               <div
@@ -252,7 +363,7 @@ const Portfolio = () => {
               >
                 <img src={project.image || "/placeholder.svg"} alt={project.title} />
                 <div className="portfolio-item-content">
-                  <h3>{project.title}</h3>
+                  <h3>{project.title} <span className="link-icon"><SquareArrowOutUpRight size={17} /></span></h3>
                   <p>{project.description}</p>
                 </div>
               </div>

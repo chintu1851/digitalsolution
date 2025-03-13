@@ -2,6 +2,10 @@
   background-color: #0a0a0a;
   padding: 80px 0;
   color: #fff;
+<<<<<<< HEAD
+=======
+  margin-top: 5rem;
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
 }
 
 .contact .container {
@@ -185,7 +189,11 @@
 @media (max-width: 768px) {
   .contact .section-title {
     font-size: 2rem;
+<<<<<<< HEAD
     margin-top: 1rem;
+=======
+    margin-top: 3rem;
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
   }
 
   .contact-content {
@@ -226,4 +234,13 @@
 
 .contact-form-container {
   animation-delay: 0.6s;
+<<<<<<< HEAD
+=======
+}
+
+@media (max-width: 480px) {
+  .section-title{
+    margin-top: 2rem;
+  }
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
 }

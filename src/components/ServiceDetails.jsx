@@ -6,12 +6,26 @@ import { ArrowLeft, ChevronRight } from "lucide-react"
 import { Link } from "react-router-dom"
 import "../styles/ServiceDetails.css"
 import { motion, AnimatePresence } from "framer-motion";
+<<<<<<< HEAD
 
 
 const ServiceDetail = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+=======
+import Button from "./Button";
+import { ArrowRight } from "lucide-react"
+import { useNavigate } from 'react-router-dom';
+
+const ServiceDetail = () => {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
     const { id } = useParams()
     const service = services.find((s) => s.id === Number.parseInt(id))
 
@@ -68,8 +82,12 @@ const ServiceDetail = () => {
                                     <div key={index} className="tech-card">
                                         <span className="tech-number">0{index + 1}</span>
                                         <div className="tech-content">
+<<<<<<< HEAD
                                             <h3>{tech.name}</h3>
                                             <p>{tech.description}</p>
+=======
+                                            <p>{tech.name}</p>
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
                                         </div>
                                     </div>
                                 ))}
@@ -100,10 +118,14 @@ const ServiceDetail = () => {
                             <div className="offer-content">
                                 <h2>What We Offer</h2>
                                 <p>{service.whatWeOffer}</p>
+<<<<<<< HEAD
                                 <Link to="/contact" className="cta-button">
                                     Get Started
                                     <ChevronRight size={20} />
                                 </Link>
+=======
+                                <Button btn={<ArrowRight size={20} />} className="btn" onClick={() => navigate("/contact")}>Get Started</Button>
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
                             </div>
                             <div className="offer-image">
                                 <img src={service.image2 || "/placeholder.svg"} alt={service.title} />

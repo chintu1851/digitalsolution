@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 "use client";
 
+=======
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -7,6 +10,7 @@ import '../styles/Services.css';
 import Layout from "../layout/layout";
 import { X, Code, Brain, Cloud, Shield, Wifi, LineChart, BarChart, Briefcase, Search } from "lucide-react";
 import { FaReact, FaNodeJs, FaPython, FaAws, FaDocker } from "react-icons/fa"
+<<<<<<< HEAD
 // Export the services array
 import { useEffect } from "react";
 import aiml from '../images/AIML.jpg'
@@ -26,6 +30,30 @@ export const services = [
   {
     id: 1,
     title: "Custom Software Development",
+=======
+import Button from "./Button";
+import { Link2 } from 'lucide-react';
+
+import { useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
+import aiml from '../images/AIML.jpg'
+import aiml2 from '../images/aiml2.jpg'
+import csd1 from '../images/se1.jpg'
+import csd2 from '../images/se2.jpg'
+import da1 from '../images/da1.jpg'
+import da2 from '../images/da2.jpg'
+import bc1 from '../images/bc1.jpg'
+import bc2 from '../images/bc2.jpg'
+import seo1 from '../images/seo1.jpg'
+import seo2 from '../images/seo2.jpg'
+import itc1 from '../images/itc.jpg'
+import itc2 from '../images/itc2.jpg'
+
+export const services = [
+  {
+    id: 1,
+    title: "Application Design and Development",
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
     description: "Tailored solutions to meet your unique business needs, from web applications to enterprise software.",
     icon: <Code className="service-icon" />,
     background:
@@ -248,9 +276,18 @@ export const services = [
   },
 ]
 const Services = () => {
+<<<<<<< HEAD
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+=======
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -296,15 +333,22 @@ const Services = () => {
                 key={service.id}
                 className="service-card"
                 variants={cardVariants}
+<<<<<<< HEAD
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+=======
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
               >
                 <div className="service-icon">{service.icon}</div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
+<<<<<<< HEAD
                 <Link to={`/services/${service.id}`} className="learn-more-btn">
                   Learn More
                 </Link>
+=======
+                <Button btn={<Link2 size={20} />} className="btn" onClick={() => navigate(`/services/${service.id}`)}>Learn More</Button>
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
               </motion.div>
             ))}
           </motion.div>
@@ -314,4 +358,8 @@ const Services = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Services;
+=======
+export default Services;
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c

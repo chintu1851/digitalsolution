@@ -1,19 +1,42 @@
 @font-face {
   font-family: 'Header';
+<<<<<<< HEAD
   src: url('../font/acorn-7.ttf') format('truetype');
+=======
+  src: url('./font/acorn-7.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Regular';
+  src: url('./font/GT-Light.otf') format('opentype');
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
   font-weight: normal;
   font-style: normal;
 }
 
 body {
   margin: 0;
+<<<<<<< HEAD
   font-family: "Lato", serif, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+=======
+  font-family: "Regular", serif, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  color: #F5F5F5;
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c

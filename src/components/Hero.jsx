@@ -1,7 +1,6 @@
-"use client"
-
 import { useEffect, useState, useRef } from "react"
-import { motion, useAnimation } from "framer-motion"
+import { useNavigate } from 'react-router-dom';
+import { color, motion, useAnimation } from "framer-motion"
 import { FaReact, FaNodeJs, FaPython, FaAws, FaDocker } from "react-icons/fa"
 import { SiKubernetes, SiTypescript, SiMongodb, SiPostgresql, SiRedis, SiGraphql, SiNextdotjs } from "react-icons/si"
 import "../styles/Hero.css"
@@ -11,22 +10,46 @@ import avatar3 from '../images/avatar3.jpg'
 import avatar4 from '../images/avatar4.jpg'
 import avatar5 from '../images/avatar5.jpg'
 import Layout from "../layout/layout"
+<<<<<<< HEAD
 import bgimage from '../images/bgit.jpg'
+=======
+import home from '../images/bgit.jpg'
+import Button from "./Button";
+import { ArrowRight } from "lucide-react"
+import ECommerce from "../images/e-commerce.jpg"
+import Healthcare from "../images/healthcare.jpg"
+import Fintech from "../images/fintech.jpg"
+import Harshil from "../images/Harshil.png"
+import Chintan from "../images/chintan.png"
+import Vishal from "../images/vishal.jpg"
+import Zeel from "../images/zeel.png"
+import Testimonial from "./Testimonial";
+
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
-  const counterRef = useRef(null)
   const counterControls = useAnimation()
+<<<<<<< HEAD
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+=======
+  const navigate = useNavigate();
+
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
   useEffect(() => {
     setIsVisible(true)
     counterControls.start("visible")
   }, [counterControls])
 
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+
   return (
     <Layout>
       <div className="landing-page">
+<<<<<<< HEAD
         {/* Hero Section */}
         <section className="hero">
           <div className="hero-background">
@@ -38,12 +61,39 @@ export default function Hero() {
             <div className="hero-overlay" />
           </div>
 
+=======
+
+        <div style={{ 
+          position: 'absolute',
+          top: '0',
+          left: '0',
+          right: '0',
+          width: '100vw',
+          height: '1000px',
+          zIndex: '0',
+          opacity: 0.2,
+          backgroundImage: `url(${home})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+        }}
+        className="bg-img"
+        >
+        </div>
+
+        <section className="hero">
+
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
           <div className="container hero-content">
             <div className="hero-text">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.4 }}
+=======
+                transition={{ duration: 0.8 }}
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
                 className="hero-title"
               >
                 Intuition Engineered. Innovation Delivered
@@ -52,6 +102,7 @@ export default function Hero() {
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.4, delay: 0.3 }}
                 className="hero-description"
               >
@@ -94,11 +145,30 @@ export default function Hero() {
 
         {/* Dynamic Impact Section */}
         <section className="impact-section">
+=======
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="hero-description"
+              >
+                We craft innovative software solutions that empower businesses to thrive in the digital age. Our expert
+                team combines cutting-edge technology with creative problem-solving to deliver results that exceed
+                expectations.
+              </motion.p>
+
+              <div className="hero-cta">
+                <Button btn={<ArrowRight size={20} />} className="btn" onClick={() => navigate("/portfolio")}>View Our works</Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="expertiseId" className="expertise-div">
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
           <div className="container">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               transition={{ duration: 0.4 }}
               className="section-title"
             >
@@ -122,11 +192,20 @@ export default function Hero() {
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
               className="section-title"
+=======
+              transition={{ duration: 0.8 }}
+              className="expertise-title"
+              style={{ fontFamily: 'Header'}}
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
             >
               Our Expertise
             </motion.h2>
 
+<<<<<<< HEAD
             <div className="services-grid">
+=======
+            <div className="expertise-grid">
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
               {services.map((service, index) => (
                 <motion.div
                   key={service.title}
@@ -134,10 +213,17 @@ export default function Hero() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.2, delay: index * 0.1 }}
+<<<<<<< HEAD
                   className="service-item"
                 >
                   <service.icon />
                   <h3>{service.title}</h3>
+=======
+                  className="expertise-item"
+                >
+                  <service.icon />
+                  <h3 style={{ fontFamily: 'Header' }}>{service.title}</h3>
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
                   <p>{service.description}</p>
                 </motion.div>
               ))}
@@ -145,15 +231,24 @@ export default function Hero() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Tech Stack Section */}
+=======
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
         <section className="tech-stack">
           <div className="container">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               transition={{ duration: 0.4 }}
               className="section-title"
+=======
+              transition={{ duration: 0.8 }}
+              className="section-title"
+              style={{ fontFamily: 'Header'}}
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
             >
               Our Tech Stack
             </motion.h2>
@@ -173,15 +268,24 @@ export default function Hero() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Featured Projects Section */}
+=======
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
         <section id="portfolio" className="featured-projects">
           <div className="container">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               transition={{ duration: 0.4 }}
               className="section-title"
+=======
+              transition={{ duration: 0.8 }}
+              className="section-title"
+              style={{ fontFamily: 'Header'}}
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
             >
               Featured Projects
             </motion.h2>
@@ -194,7 +298,11 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
                   transition={{ duration: 0.4, delay: index * 0.2 }}
+=======
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
                   className="project-block"
                 >
                   <img src={project.image || "/placeholder.svg"} alt={project.title} />
@@ -207,14 +315,21 @@ export default function Hero() {
             </div>
 
             <div className="portfolio-cta">
+<<<<<<< HEAD
               <a href="/portfolio" className="cta-button primary">
                 View Full Portfolio
               </a>
+=======
+              <Button btn={<ArrowRight size={20} />} className="btn" onClick={() => navigate("/portfolio")}>View Our Portfolio</Button>
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Process Section */}
+=======
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
         <ProcessSection />
 
         <section className="testimonials">
@@ -225,22 +340,26 @@ export default function Hero() {
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
               className="section-title"
+              style={{ fontFamily: 'Header'}}
             >
               What Our Clients Say
             </motion.h2>
-            <TestimonialSlider testimonials={testimonials} />
+            <Testimonial />
           </div>
         </section>
 
-        {/* Team Section */}
         <TeamSection />
 
+<<<<<<< HEAD
        
+=======
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
       </div>
     </Layout>
   )
 }
 
+<<<<<<< HEAD
 const ImpactCard = ({ title, value, icon }) => {
   const [count, setCount] = useState(0)
 
@@ -278,6 +397,8 @@ const ImpactCard = ({ title, value, icon }) => {
   )
 }
 
+=======
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
 const ProcessSection = () => {
   const processes = [
     { title: "Discovery", description: "We start by understanding your business goals and challenges." },
@@ -296,6 +417,7 @@ const ProcessSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
           className="section-title"
+          style={{ fontFamily: 'Header'}}
         >
           Our Process
         </motion.h2>
@@ -322,6 +444,7 @@ const ProcessSection = () => {
 }
 
 const TeamSection = () => {
+<<<<<<< HEAD
 const teamMembers = [
   { name: "Chintan Patel", role: "CEO", image: avatar1 },
   { name: "Vishal Patel", role: "CTO", image: avatar2 },
@@ -331,6 +454,14 @@ const teamMembers = [
 
 ];
 
+=======
+  const teamMembers = [
+    { name: "Vishal Patel", role: "Founder & Lead", image: Vishal },
+    { name: "Chintan Patel", role: "Founder", image: Chintan },
+    { name: "Harshil Vaghani", role: "Founder & Developer", image: Harshil },
+    { name: "Zeel Malaviya", role: "Founder & Analyst", image: Zeel },
+  ]
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
 
   return (
     <section className="team-section">
@@ -341,6 +472,7 @@ const teamMembers = [
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
           className="section-title"
+          style={{ fontFamily: 'Header'}}
         >
           Meet Our Team
         </motion.h2>
@@ -365,6 +497,7 @@ const teamMembers = [
   )
 }
 
+<<<<<<< HEAD
 const ContactSection = () => {
   return (
     <section className="contact-section">
@@ -411,12 +544,14 @@ const ContactSection = () => {
   )
 }
 
+=======
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
 const services = [
   {
     title: "Custom Software Development",
     description: "We build scalable web applications using cutting-edge technologies and best practices.",
     icon: () => (
-      <svg className="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="expertise-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M12 2L2 7L12 12L22 7L12 2Z"
           stroke="currentColor"
@@ -442,10 +577,14 @@ const services = [
     ),
   },
   {
+<<<<<<< HEAD
     title: "AI & Machine Learning",
+=======
+    title: "App Development",
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
     description: "Native and cross-platform mobile applications that deliver exceptional user experiences.",
     icon: () => (
-      <svg className="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="expertise-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" strokeWidth="2" />
         <line x1="12" y1="18" x2="12" y2="18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
       </svg>
@@ -455,7 +594,7 @@ const services = [
     title: "Data Analytics",
     description: "Scalable cloud infrastructure and DevOps practices for optimal performance.",
     icon: () => (
-      <svg className="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="expertise-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M18 10H6C3.79086 10 2 11.7909 2 14C2 16.2091 3.79086 18 6 18H18C20.2091 18 22 16.2091 22 14C22 11.7909 20.2091 10 18 10Z"
           stroke="currentColor"
@@ -475,7 +614,7 @@ const services = [
     title: "Business Consulting",
     description: "User-centered design solutions that create engaging and intuitive experiences.",
     icon: () => (
-      <svg className="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="expertise-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
         <path
           d="M8 14C8.5 15.5 10 17 12 17C14 17 15.5 15.5 16 14"
@@ -489,10 +628,14 @@ const services = [
     ),
   },
   {
+<<<<<<< HEAD
     title: "SEO Services",
+=======
+    title: "AI & ML",
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
     description: "Intelligent solutions that leverage the power of artificial intelligence.",
     icon: () => (
-      <svg className="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="expertise-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M12 2V6M12 18V22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12H6M18 12H22M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93"
           stroke="currentColor"
@@ -503,10 +646,15 @@ const services = [
     ),
   },
   {
+<<<<<<< HEAD
     title: "IT Consulting",
     description: "Comprehensive security solutions to protect your digital assets.",
+=======
+    title: "SEO Development",
+    description: "Boost your online presence with expert SEO for higher rankings and organic traffic.",
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
     icon: () => (
-      <svg className="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="expertise-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M12 2L3 7V12C3 16.97 7.03 21.5 12 22C16.97 21.5 21 16.97 21 12V7L12 2Z"
           stroke="currentColor"
@@ -544,23 +692,23 @@ const projects = [
     description:
       "A full-featured e-commerce solution with real-time inventory management and AI-powered recommendations.",
     link: "#",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    image: ECommerce,
   },
   {
     title: "Healthcare App",
     description: "Mobile application for remote patient monitoring and telemedicine with integrated AI diagnostics.",
     link: "#",
-    image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    image: Healthcare,
   },
   {
     title: "FinTech Dashboard",
     description: "Real-time financial data visualization and analytics platform with predictive modeling capabilities.",
     link: "#",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    image: Fintech,
   },
 ]
 
+<<<<<<< HEAD
 const testimonials = [
   {
     quote:
@@ -644,3 +792,5 @@ const TestimonialSlider = ({ testimonials }) => {
   )
 }
 
+=======
+>>>>>>> c441da36c921aea4674fdd38aeb69a619086752c
