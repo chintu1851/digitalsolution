@@ -59,15 +59,15 @@ const Contact = () => {
               <ul className="contact-details">
                 <li>
                   <FaEnvelope />
-                  <span>contact@Intuiqo.com</span>
+                  <span>chintandaxeshpatel@gmail.com</span>
                 </li>
                 <li>
                   <FaPhone />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+1 (437) 299-7490</span>
                 </li>
                 <li>
                   <FaMapMarkerAlt />
-                  <span>123 Tech Avenue, Silicon Valley, CA 94000</span>
+                  <span>Toronto, Canada</span>
                 </li>
               </ul>
               <div className="social-links">
